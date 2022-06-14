@@ -22,8 +22,6 @@ permalink: /3.17.3/logging/v1alpha1/output/
   * [`fn withGeneration(generation)`](#fn-metadatawithgeneration)
   * [`fn withLabels(labels)`](#fn-metadatawithlabels)
   * [`fn withLabelsMixin(labels)`](#fn-metadatawithlabelsmixin)
-  * [`fn withManagedFields(managedFields)`](#fn-metadatawithmanagedfields)
-  * [`fn withManagedFieldsMixin(managedFields)`](#fn-metadatawithmanagedfieldsmixin)
   * [`fn withName(name)`](#fn-metadatawithname)
   * [`fn withNamespace(namespace)`](#fn-metadatawithnamespace)
   * [`fn withOwnerReferences(ownerReferences)`](#fn-metadatawithownerreferences)
@@ -743,6 +741,48 @@ permalink: /3.17.3/logging/v1alpha1/output/
       * [`fn withSelf_hostname(self_hostname)`](#fn-specforwardsecuritywithself_hostname)
       * [`fn withShared_key(shared_key)`](#fn-specforwardsecuritywithshared_key)
       * [`fn withUser_auth(user_auth)`](#fn-specforwardsecuritywithuser_auth)
+    * [`obj spec.forward.servers`](#obj-specforwardservers)
+      * [`fn withHost(host)`](#fn-specforwardserverswithhost)
+      * [`fn withName(name)`](#fn-specforwardserverswithname)
+      * [`fn withPort(port)`](#fn-specforwardserverswithport)
+      * [`fn withStandby(standby)`](#fn-specforwardserverswithstandby)
+      * [`fn withWeight(weight)`](#fn-specforwardserverswithweight)
+      * [`obj spec.forward.servers.password`](#obj-specforwardserverspassword)
+        * [`fn withValue(value)`](#fn-specforwardserverspasswordwithvalue)
+        * [`obj spec.forward.servers.password.mountFrom`](#obj-specforwardserverspasswordmountfrom)
+          * [`obj spec.forward.servers.password.mountFrom.secretKeyRef`](#obj-specforwardserverspasswordmountfromsecretkeyref)
+            * [`fn withKey(key)`](#fn-specforwardserverspasswordmountfromsecretkeyrefwithkey)
+            * [`fn withName(name)`](#fn-specforwardserverspasswordmountfromsecretkeyrefwithname)
+            * [`fn withOptional(optional)`](#fn-specforwardserverspasswordmountfromsecretkeyrefwithoptional)
+        * [`obj spec.forward.servers.password.valueFrom`](#obj-specforwardserverspasswordvaluefrom)
+          * [`obj spec.forward.servers.password.valueFrom.secretKeyRef`](#obj-specforwardserverspasswordvaluefromsecretkeyref)
+            * [`fn withKey(key)`](#fn-specforwardserverspasswordvaluefromsecretkeyrefwithkey)
+            * [`fn withName(name)`](#fn-specforwardserverspasswordvaluefromsecretkeyrefwithname)
+            * [`fn withOptional(optional)`](#fn-specforwardserverspasswordvaluefromsecretkeyrefwithoptional)
+      * [`obj spec.forward.servers.shared_key`](#obj-specforwardserversshared_key)
+        * [`fn withValue(value)`](#fn-specforwardserversshared_keywithvalue)
+        * [`obj spec.forward.servers.shared_key.mountFrom`](#obj-specforwardserversshared_keymountfrom)
+          * [`obj spec.forward.servers.shared_key.mountFrom.secretKeyRef`](#obj-specforwardserversshared_keymountfromsecretkeyref)
+            * [`fn withKey(key)`](#fn-specforwardserversshared_keymountfromsecretkeyrefwithkey)
+            * [`fn withName(name)`](#fn-specforwardserversshared_keymountfromsecretkeyrefwithname)
+            * [`fn withOptional(optional)`](#fn-specforwardserversshared_keymountfromsecretkeyrefwithoptional)
+        * [`obj spec.forward.servers.shared_key.valueFrom`](#obj-specforwardserversshared_keyvaluefrom)
+          * [`obj spec.forward.servers.shared_key.valueFrom.secretKeyRef`](#obj-specforwardserversshared_keyvaluefromsecretkeyref)
+            * [`fn withKey(key)`](#fn-specforwardserversshared_keyvaluefromsecretkeyrefwithkey)
+            * [`fn withName(name)`](#fn-specforwardserversshared_keyvaluefromsecretkeyrefwithname)
+            * [`fn withOptional(optional)`](#fn-specforwardserversshared_keyvaluefromsecretkeyrefwithoptional)
+      * [`obj spec.forward.servers.username`](#obj-specforwardserversusername)
+        * [`fn withValue(value)`](#fn-specforwardserversusernamewithvalue)
+        * [`obj spec.forward.servers.username.mountFrom`](#obj-specforwardserversusernamemountfrom)
+          * [`obj spec.forward.servers.username.mountFrom.secretKeyRef`](#obj-specforwardserversusernamemountfromsecretkeyref)
+            * [`fn withKey(key)`](#fn-specforwardserversusernamemountfromsecretkeyrefwithkey)
+            * [`fn withName(name)`](#fn-specforwardserversusernamemountfromsecretkeyrefwithname)
+            * [`fn withOptional(optional)`](#fn-specforwardserversusernamemountfromsecretkeyrefwithoptional)
+        * [`obj spec.forward.servers.username.valueFrom`](#obj-specforwardserversusernamevaluefrom)
+          * [`obj spec.forward.servers.username.valueFrom.secretKeyRef`](#obj-specforwardserversusernamevaluefromsecretkeyref)
+            * [`fn withKey(key)`](#fn-specforwardserversusernamevaluefromsecretkeyrefwithkey)
+            * [`fn withName(name)`](#fn-specforwardserversusernamevaluefromsecretkeyrefwithname)
+            * [`fn withOptional(optional)`](#fn-specforwardserversusernamevaluefromsecretkeyrefwithoptional)
     * [`obj spec.forward.tls_cert_path`](#obj-specforwardtls_cert_path)
       * [`fn withValue(value)`](#fn-specforwardtls_cert_pathwithvalue)
       * [`obj spec.forward.tls_cert_path.mountFrom`](#obj-specforwardtls_cert_pathmountfrom)
@@ -859,6 +899,9 @@ permalink: /3.17.3/logging/v1alpha1/output/
       * [`fn withAdd_newline(add_newline)`](#fn-specgcsformatwithadd_newline)
       * [`fn withMessage_key(message_key)`](#fn-specgcsformatwithmessage_key)
       * [`fn withType(type)`](#fn-specgcsformatwithtype)
+    * [`obj spec.gcs.object_metadata`](#obj-specgcsobject_metadata)
+      * [`fn withKey(key)`](#fn-specgcsobject_metadatawithkey)
+      * [`fn withValue(value)`](#fn-specgcsobject_metadatawithvalue)
   * [`obj spec.gelf`](#obj-specgelf)
     * [`fn withHost(host)`](#fn-specgelfwithhost)
     * [`fn withPort(port)`](#fn-specgelfwithport)
@@ -2164,24 +2207,6 @@ withLabelsMixin(labels)
 ```
 
 "Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels"
-
-**Note:** This function appends passed data to existing values
-
-### fn metadata.withManagedFields
-
-```ts
-withManagedFields(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
-
-### fn metadata.withManagedFieldsMixin
-
-```ts
-withManagedFieldsMixin(managedFields)
-```
-
-"ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like \"ci-cd\". The set of fields is always in the version that the workflow used when modifying the object."
 
 **Note:** This function appends passed data to existing values
 
@@ -7419,6 +7444,278 @@ withUser_auth(user_auth)
 
 
 
+## obj spec.forward.servers
+
+
+
+### fn spec.forward.servers.withHost
+
+```ts
+withHost(host)
+```
+
+
+
+### fn spec.forward.servers.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forward.servers.withPort
+
+```ts
+withPort(port)
+```
+
+
+
+### fn spec.forward.servers.withStandby
+
+```ts
+withStandby(standby)
+```
+
+
+
+### fn spec.forward.servers.withWeight
+
+```ts
+withWeight(weight)
+```
+
+
+
+## obj spec.forward.servers.password
+
+
+
+### fn spec.forward.servers.password.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.forward.servers.password.mountFrom
+
+
+
+## obj spec.forward.servers.password.mountFrom.secretKeyRef
+
+
+
+### fn spec.forward.servers.password.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forward.servers.password.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forward.servers.password.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forward.servers.password.valueFrom
+
+
+
+## obj spec.forward.servers.password.valueFrom.secretKeyRef
+
+
+
+### fn spec.forward.servers.password.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forward.servers.password.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forward.servers.password.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forward.servers.shared_key
+
+
+
+### fn spec.forward.servers.shared_key.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.forward.servers.shared_key.mountFrom
+
+
+
+## obj spec.forward.servers.shared_key.mountFrom.secretKeyRef
+
+
+
+### fn spec.forward.servers.shared_key.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forward.servers.shared_key.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forward.servers.shared_key.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forward.servers.shared_key.valueFrom
+
+
+
+## obj spec.forward.servers.shared_key.valueFrom.secretKeyRef
+
+
+
+### fn spec.forward.servers.shared_key.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forward.servers.shared_key.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forward.servers.shared_key.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forward.servers.username
+
+
+
+### fn spec.forward.servers.username.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.forward.servers.username.mountFrom
+
+
+
+## obj spec.forward.servers.username.mountFrom.secretKeyRef
+
+
+
+### fn spec.forward.servers.username.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forward.servers.username.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forward.servers.username.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.forward.servers.username.valueFrom
+
+
+
+## obj spec.forward.servers.username.valueFrom.secretKeyRef
+
+
+
+### fn spec.forward.servers.username.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.forward.servers.username.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.forward.servers.username.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
 ## obj spec.forward.tls_cert_path
 
 
@@ -8233,6 +8530,26 @@ withMessage_key(message_key)
 
 ```ts
 withType(type)
+```
+
+
+
+## obj spec.gcs.object_metadata
+
+
+
+### fn spec.gcs.object_metadata.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.gcs.object_metadata.withValue
+
+```ts
+withValue(value)
 ```
 
 
