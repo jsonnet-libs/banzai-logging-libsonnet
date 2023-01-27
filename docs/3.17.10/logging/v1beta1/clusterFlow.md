@@ -1,8 +1,8 @@
 ---
-permalink: /3.17.3/logging/v1alpha1/flow/
+permalink: /3.17.10/logging/v1beta1/clusterFlow/
 ---
 
-# logging.v1alpha1.flow
+# logging.v1beta1.clusterFlow
 
 
 
@@ -34,8 +34,6 @@ permalink: /3.17.3/logging/v1alpha1/flow/
   * [`fn withFiltersMixin(filters)`](#fn-specwithfiltersmixin)
   * [`fn withGlobalOutputRefs(globalOutputRefs)`](#fn-specwithglobaloutputrefs)
   * [`fn withGlobalOutputRefsMixin(globalOutputRefs)`](#fn-specwithglobaloutputrefsmixin)
-  * [`fn withLocalOutputRefs(localOutputRefs)`](#fn-specwithlocaloutputrefs)
-  * [`fn withLocalOutputRefsMixin(localOutputRefs)`](#fn-specwithlocaloutputrefsmixin)
   * [`fn withLoggingRef(loggingRef)`](#fn-specwithloggingref)
   * [`fn withMatch(match)`](#fn-specwithmatch)
   * [`fn withMatchMixin(match)`](#fn-specwithmatchmixin)
@@ -67,12 +65,22 @@ permalink: /3.17.3/logging/v1alpha1/flow/
       * [`fn withForce_line_breaks(force_line_breaks)`](#fn-specfiltersdetectexceptionswithforce_line_breaks)
       * [`fn withLanguages(languages)`](#fn-specfiltersdetectexceptionswithlanguages)
       * [`fn withLanguagesMixin(languages)`](#fn-specfiltersdetectexceptionswithlanguagesmixin)
+      * [`fn withMatch_tag(match_tag)`](#fn-specfiltersdetectexceptionswithmatch_tag)
       * [`fn withMax_bytes(max_bytes)`](#fn-specfiltersdetectexceptionswithmax_bytes)
       * [`fn withMax_lines(max_lines)`](#fn-specfiltersdetectexceptionswithmax_lines)
       * [`fn withMessage(message)`](#fn-specfiltersdetectexceptionswithmessage)
       * [`fn withMultiline_flush_interval(multiline_flush_interval)`](#fn-specfiltersdetectexceptionswithmultiline_flush_interval)
       * [`fn withRemove_tag_prefix(remove_tag_prefix)`](#fn-specfiltersdetectexceptionswithremove_tag_prefix)
       * [`fn withStream(stream)`](#fn-specfiltersdetectexceptionswithstream)
+    * [`obj spec.filters.elasticsearch_genid`](#obj-specfilterselasticsearch_genid)
+      * [`fn withHash_id_key(hash_id_key)`](#fn-specfilterselasticsearch_genidwithhash_id_key)
+      * [`fn withHash_type(hash_type)`](#fn-specfilterselasticsearch_genidwithhash_type)
+      * [`fn withInclude_tag_in_seed(include_tag_in_seed)`](#fn-specfilterselasticsearch_genidwithinclude_tag_in_seed)
+      * [`fn withInclude_time_in_seed(include_time_in_seed)`](#fn-specfilterselasticsearch_genidwithinclude_time_in_seed)
+      * [`fn withRecord_keys(record_keys)`](#fn-specfilterselasticsearch_genidwithrecord_keys)
+      * [`fn withSeparator(separator)`](#fn-specfilterselasticsearch_genidwithseparator)
+      * [`fn withUse_entire_record(use_entire_record)`](#fn-specfilterselasticsearch_genidwithuse_entire_record)
+      * [`fn withUse_record_as_seed(use_record_as_seed)`](#fn-specfilterselasticsearch_genidwithuse_record_as_seed)
     * [`obj spec.filters.enhanceK8s`](#obj-specfiltersenhancek8s)
       * [`fn withApi_groups(api_groups)`](#fn-specfiltersenhancek8swithapi_groups)
       * [`fn withApi_groupsMixin(api_groups)`](#fn-specfiltersenhancek8swithapi_groupsmixin)
@@ -195,12 +203,18 @@ permalink: /3.17.3/logging/v1alpha1/flow/
         * [`fn withExpression(expression)`](#fn-specfiltersparserparsewithexpression)
         * [`fn withFormat(format)`](#fn-specfiltersparserparsewithformat)
         * [`fn withFormat_firstline(format_firstline)`](#fn-specfiltersparserparsewithformat_firstline)
+        * [`fn withGrok_failure_key(grok_failure_key)`](#fn-specfiltersparserparsewithgrok_failure_key)
+        * [`fn withGrok_name_key(grok_name_key)`](#fn-specfiltersparserparsewithgrok_name_key)
+        * [`fn withGrok_pattern(grok_pattern)`](#fn-specfiltersparserparsewithgrok_pattern)
+        * [`fn withGrok_patterns(grok_patterns)`](#fn-specfiltersparserparsewithgrok_patterns)
+        * [`fn withGrok_patternsMixin(grok_patterns)`](#fn-specfiltersparserparsewithgrok_patternsmixin)
         * [`fn withKeep_time_key(keep_time_key)`](#fn-specfiltersparserparsewithkeep_time_key)
         * [`fn withKeys(keys)`](#fn-specfiltersparserparsewithkeys)
         * [`fn withLabel_delimiter(label_delimiter)`](#fn-specfiltersparserparsewithlabel_delimiter)
         * [`fn withLocal_time(local_time)`](#fn-specfiltersparserparsewithlocal_time)
         * [`fn withMultiline(multiline)`](#fn-specfiltersparserparsewithmultiline)
         * [`fn withMultilineMixin(multiline)`](#fn-specfiltersparserparsewithmultilinemixin)
+        * [`fn withMultiline_start_regexp(multiline_start_regexp)`](#fn-specfiltersparserparsewithmultiline_start_regexp)
         * [`fn withNull_empty_string(null_empty_string)`](#fn-specfiltersparserparsewithnull_empty_string)
         * [`fn withNull_value_pattern(null_value_pattern)`](#fn-specfiltersparserparsewithnull_value_pattern)
         * [`fn withPatterns(patterns)`](#fn-specfiltersparserparsewithpatterns)
@@ -212,12 +226,37 @@ permalink: /3.17.3/logging/v1alpha1/flow/
         * [`fn withType(type)`](#fn-specfiltersparserparsewithtype)
         * [`fn withTypes(types)`](#fn-specfiltersparserparsewithtypes)
         * [`fn withUtc(utc)`](#fn-specfiltersparserparsewithutc)
+        * [`obj spec.filters.parser.parse.custom_pattern_path`](#obj-specfiltersparserparsecustom_pattern_path)
+          * [`fn withValue(value)`](#fn-specfiltersparserparsecustom_pattern_pathwithvalue)
+          * [`obj spec.filters.parser.parse.custom_pattern_path.mountFrom`](#obj-specfiltersparserparsecustom_pattern_pathmountfrom)
+            * [`obj spec.filters.parser.parse.custom_pattern_path.mountFrom.secretKeyRef`](#obj-specfiltersparserparsecustom_pattern_pathmountfromsecretkeyref)
+              * [`fn withKey(key)`](#fn-specfiltersparserparsecustom_pattern_pathmountfromsecretkeyrefwithkey)
+              * [`fn withName(name)`](#fn-specfiltersparserparsecustom_pattern_pathmountfromsecretkeyrefwithname)
+              * [`fn withOptional(optional)`](#fn-specfiltersparserparsecustom_pattern_pathmountfromsecretkeyrefwithoptional)
+          * [`obj spec.filters.parser.parse.custom_pattern_path.valueFrom`](#obj-specfiltersparserparsecustom_pattern_pathvaluefrom)
+            * [`obj spec.filters.parser.parse.custom_pattern_path.valueFrom.secretKeyRef`](#obj-specfiltersparserparsecustom_pattern_pathvaluefromsecretkeyref)
+              * [`fn withKey(key)`](#fn-specfiltersparserparsecustom_pattern_pathvaluefromsecretkeyrefwithkey)
+              * [`fn withName(name)`](#fn-specfiltersparserparsecustom_pattern_pathvaluefromsecretkeyrefwithname)
+              * [`fn withOptional(optional)`](#fn-specfiltersparserparsecustom_pattern_pathvaluefromsecretkeyrefwithoptional)
+        * [`obj spec.filters.parser.parse.grok_patterns`](#obj-specfiltersparserparsegrok_patterns)
+          * [`fn withKeep_time_key(keep_time_key)`](#fn-specfiltersparserparsegrok_patternswithkeep_time_key)
+          * [`fn withName(name)`](#fn-specfiltersparserparsegrok_patternswithname)
+          * [`fn withPattern(pattern)`](#fn-specfiltersparserparsegrok_patternswithpattern)
+          * [`fn withTime_format(time_format)`](#fn-specfiltersparserparsegrok_patternswithtime_format)
+          * [`fn withTime_key(time_key)`](#fn-specfiltersparserparsegrok_patternswithtime_key)
+          * [`fn withTimezone(timezone)`](#fn-specfiltersparserparsegrok_patternswithtimezone)
         * [`obj spec.filters.parser.parse.patterns`](#obj-specfiltersparserparsepatterns)
           * [`fn withEstimate_current_event(estimate_current_event)`](#fn-specfiltersparserparsepatternswithestimate_current_event)
           * [`fn withExpression(expression)`](#fn-specfiltersparserparsepatternswithexpression)
           * [`fn withFormat(format)`](#fn-specfiltersparserparsepatternswithformat)
+          * [`fn withGrok_failure_key(grok_failure_key)`](#fn-specfiltersparserparsepatternswithgrok_failure_key)
+          * [`fn withGrok_name_key(grok_name_key)`](#fn-specfiltersparserparsepatternswithgrok_name_key)
+          * [`fn withGrok_pattern(grok_pattern)`](#fn-specfiltersparserparsepatternswithgrok_pattern)
+          * [`fn withGrok_patterns(grok_patterns)`](#fn-specfiltersparserparsepatternswithgrok_patterns)
+          * [`fn withGrok_patternsMixin(grok_patterns)`](#fn-specfiltersparserparsepatternswithgrok_patternsmixin)
           * [`fn withKeep_time_key(keep_time_key)`](#fn-specfiltersparserparsepatternswithkeep_time_key)
           * [`fn withLocal_time(local_time)`](#fn-specfiltersparserparsepatternswithlocal_time)
+          * [`fn withMultiline_start_regexp(multiline_start_regexp)`](#fn-specfiltersparserparsepatternswithmultiline_start_regexp)
           * [`fn withNull_empty_string(null_empty_string)`](#fn-specfiltersparserparsepatternswithnull_empty_string)
           * [`fn withNull_value_pattern(null_value_pattern)`](#fn-specfiltersparserparsepatternswithnull_value_pattern)
           * [`fn withTime_format(time_format)`](#fn-specfiltersparserparsepatternswithtime_format)
@@ -227,6 +266,25 @@ permalink: /3.17.3/logging/v1alpha1/flow/
           * [`fn withType(type)`](#fn-specfiltersparserparsepatternswithtype)
           * [`fn withTypes(types)`](#fn-specfiltersparserparsepatternswithtypes)
           * [`fn withUtc(utc)`](#fn-specfiltersparserparsepatternswithutc)
+          * [`obj spec.filters.parser.parse.patterns.custom_pattern_path`](#obj-specfiltersparserparsepatternscustom_pattern_path)
+            * [`fn withValue(value)`](#fn-specfiltersparserparsepatternscustom_pattern_pathwithvalue)
+            * [`obj spec.filters.parser.parse.patterns.custom_pattern_path.mountFrom`](#obj-specfiltersparserparsepatternscustom_pattern_pathmountfrom)
+              * [`obj spec.filters.parser.parse.patterns.custom_pattern_path.mountFrom.secretKeyRef`](#obj-specfiltersparserparsepatternscustom_pattern_pathmountfromsecretkeyref)
+                * [`fn withKey(key)`](#fn-specfiltersparserparsepatternscustom_pattern_pathmountfromsecretkeyrefwithkey)
+                * [`fn withName(name)`](#fn-specfiltersparserparsepatternscustom_pattern_pathmountfromsecretkeyrefwithname)
+                * [`fn withOptional(optional)`](#fn-specfiltersparserparsepatternscustom_pattern_pathmountfromsecretkeyrefwithoptional)
+            * [`obj spec.filters.parser.parse.patterns.custom_pattern_path.valueFrom`](#obj-specfiltersparserparsepatternscustom_pattern_pathvaluefrom)
+              * [`obj spec.filters.parser.parse.patterns.custom_pattern_path.valueFrom.secretKeyRef`](#obj-specfiltersparserparsepatternscustom_pattern_pathvaluefromsecretkeyref)
+                * [`fn withKey(key)`](#fn-specfiltersparserparsepatternscustom_pattern_pathvaluefromsecretkeyrefwithkey)
+                * [`fn withName(name)`](#fn-specfiltersparserparsepatternscustom_pattern_pathvaluefromsecretkeyrefwithname)
+                * [`fn withOptional(optional)`](#fn-specfiltersparserparsepatternscustom_pattern_pathvaluefromsecretkeyrefwithoptional)
+          * [`obj spec.filters.parser.parse.patterns.grok_patterns`](#obj-specfiltersparserparsepatternsgrok_patterns)
+            * [`fn withKeep_time_key(keep_time_key)`](#fn-specfiltersparserparsepatternsgrok_patternswithkeep_time_key)
+            * [`fn withName(name)`](#fn-specfiltersparserparsepatternsgrok_patternswithname)
+            * [`fn withPattern(pattern)`](#fn-specfiltersparserparsepatternsgrok_patternswithpattern)
+            * [`fn withTime_format(time_format)`](#fn-specfiltersparserparsepatternsgrok_patternswithtime_format)
+            * [`fn withTime_key(time_key)`](#fn-specfiltersparserparsepatternsgrok_patternswithtime_key)
+            * [`fn withTimezone(timezone)`](#fn-specfiltersparserparsepatternsgrok_patternswithtimezone)
       * [`obj spec.filters.parser.parsers`](#obj-specfiltersparserparsers)
         * [`fn withDelimiter(delimiter)`](#fn-specfiltersparserparserswithdelimiter)
         * [`fn withDelimiter_pattern(delimiter_pattern)`](#fn-specfiltersparserparserswithdelimiter_pattern)
@@ -234,12 +292,18 @@ permalink: /3.17.3/logging/v1alpha1/flow/
         * [`fn withExpression(expression)`](#fn-specfiltersparserparserswithexpression)
         * [`fn withFormat(format)`](#fn-specfiltersparserparserswithformat)
         * [`fn withFormat_firstline(format_firstline)`](#fn-specfiltersparserparserswithformat_firstline)
+        * [`fn withGrok_failure_key(grok_failure_key)`](#fn-specfiltersparserparserswithgrok_failure_key)
+        * [`fn withGrok_name_key(grok_name_key)`](#fn-specfiltersparserparserswithgrok_name_key)
+        * [`fn withGrok_pattern(grok_pattern)`](#fn-specfiltersparserparserswithgrok_pattern)
+        * [`fn withGrok_patterns(grok_patterns)`](#fn-specfiltersparserparserswithgrok_patterns)
+        * [`fn withGrok_patternsMixin(grok_patterns)`](#fn-specfiltersparserparserswithgrok_patternsmixin)
         * [`fn withKeep_time_key(keep_time_key)`](#fn-specfiltersparserparserswithkeep_time_key)
         * [`fn withKeys(keys)`](#fn-specfiltersparserparserswithkeys)
         * [`fn withLabel_delimiter(label_delimiter)`](#fn-specfiltersparserparserswithlabel_delimiter)
         * [`fn withLocal_time(local_time)`](#fn-specfiltersparserparserswithlocal_time)
         * [`fn withMultiline(multiline)`](#fn-specfiltersparserparserswithmultiline)
         * [`fn withMultilineMixin(multiline)`](#fn-specfiltersparserparserswithmultilinemixin)
+        * [`fn withMultiline_start_regexp(multiline_start_regexp)`](#fn-specfiltersparserparserswithmultiline_start_regexp)
         * [`fn withNull_empty_string(null_empty_string)`](#fn-specfiltersparserparserswithnull_empty_string)
         * [`fn withNull_value_pattern(null_value_pattern)`](#fn-specfiltersparserparserswithnull_value_pattern)
         * [`fn withPatterns(patterns)`](#fn-specfiltersparserparserswithpatterns)
@@ -251,12 +315,37 @@ permalink: /3.17.3/logging/v1alpha1/flow/
         * [`fn withType(type)`](#fn-specfiltersparserparserswithtype)
         * [`fn withTypes(types)`](#fn-specfiltersparserparserswithtypes)
         * [`fn withUtc(utc)`](#fn-specfiltersparserparserswithutc)
+        * [`obj spec.filters.parser.parsers.custom_pattern_path`](#obj-specfiltersparserparserscustom_pattern_path)
+          * [`fn withValue(value)`](#fn-specfiltersparserparserscustom_pattern_pathwithvalue)
+          * [`obj spec.filters.parser.parsers.custom_pattern_path.mountFrom`](#obj-specfiltersparserparserscustom_pattern_pathmountfrom)
+            * [`obj spec.filters.parser.parsers.custom_pattern_path.mountFrom.secretKeyRef`](#obj-specfiltersparserparserscustom_pattern_pathmountfromsecretkeyref)
+              * [`fn withKey(key)`](#fn-specfiltersparserparserscustom_pattern_pathmountfromsecretkeyrefwithkey)
+              * [`fn withName(name)`](#fn-specfiltersparserparserscustom_pattern_pathmountfromsecretkeyrefwithname)
+              * [`fn withOptional(optional)`](#fn-specfiltersparserparserscustom_pattern_pathmountfromsecretkeyrefwithoptional)
+          * [`obj spec.filters.parser.parsers.custom_pattern_path.valueFrom`](#obj-specfiltersparserparserscustom_pattern_pathvaluefrom)
+            * [`obj spec.filters.parser.parsers.custom_pattern_path.valueFrom.secretKeyRef`](#obj-specfiltersparserparserscustom_pattern_pathvaluefromsecretkeyref)
+              * [`fn withKey(key)`](#fn-specfiltersparserparserscustom_pattern_pathvaluefromsecretkeyrefwithkey)
+              * [`fn withName(name)`](#fn-specfiltersparserparserscustom_pattern_pathvaluefromsecretkeyrefwithname)
+              * [`fn withOptional(optional)`](#fn-specfiltersparserparserscustom_pattern_pathvaluefromsecretkeyrefwithoptional)
+        * [`obj spec.filters.parser.parsers.grok_patterns`](#obj-specfiltersparserparsersgrok_patterns)
+          * [`fn withKeep_time_key(keep_time_key)`](#fn-specfiltersparserparsersgrok_patternswithkeep_time_key)
+          * [`fn withName(name)`](#fn-specfiltersparserparsersgrok_patternswithname)
+          * [`fn withPattern(pattern)`](#fn-specfiltersparserparsersgrok_patternswithpattern)
+          * [`fn withTime_format(time_format)`](#fn-specfiltersparserparsersgrok_patternswithtime_format)
+          * [`fn withTime_key(time_key)`](#fn-specfiltersparserparsersgrok_patternswithtime_key)
+          * [`fn withTimezone(timezone)`](#fn-specfiltersparserparsersgrok_patternswithtimezone)
         * [`obj spec.filters.parser.parsers.patterns`](#obj-specfiltersparserparserspatterns)
           * [`fn withEstimate_current_event(estimate_current_event)`](#fn-specfiltersparserparserspatternswithestimate_current_event)
           * [`fn withExpression(expression)`](#fn-specfiltersparserparserspatternswithexpression)
           * [`fn withFormat(format)`](#fn-specfiltersparserparserspatternswithformat)
+          * [`fn withGrok_failure_key(grok_failure_key)`](#fn-specfiltersparserparserspatternswithgrok_failure_key)
+          * [`fn withGrok_name_key(grok_name_key)`](#fn-specfiltersparserparserspatternswithgrok_name_key)
+          * [`fn withGrok_pattern(grok_pattern)`](#fn-specfiltersparserparserspatternswithgrok_pattern)
+          * [`fn withGrok_patterns(grok_patterns)`](#fn-specfiltersparserparserspatternswithgrok_patterns)
+          * [`fn withGrok_patternsMixin(grok_patterns)`](#fn-specfiltersparserparserspatternswithgrok_patternsmixin)
           * [`fn withKeep_time_key(keep_time_key)`](#fn-specfiltersparserparserspatternswithkeep_time_key)
           * [`fn withLocal_time(local_time)`](#fn-specfiltersparserparserspatternswithlocal_time)
+          * [`fn withMultiline_start_regexp(multiline_start_regexp)`](#fn-specfiltersparserparserspatternswithmultiline_start_regexp)
           * [`fn withNull_empty_string(null_empty_string)`](#fn-specfiltersparserparserspatternswithnull_empty_string)
           * [`fn withNull_value_pattern(null_value_pattern)`](#fn-specfiltersparserparserspatternswithnull_value_pattern)
           * [`fn withTime_format(time_format)`](#fn-specfiltersparserparserspatternswithtime_format)
@@ -266,6 +355,25 @@ permalink: /3.17.3/logging/v1alpha1/flow/
           * [`fn withType(type)`](#fn-specfiltersparserparserspatternswithtype)
           * [`fn withTypes(types)`](#fn-specfiltersparserparserspatternswithtypes)
           * [`fn withUtc(utc)`](#fn-specfiltersparserparserspatternswithutc)
+          * [`obj spec.filters.parser.parsers.patterns.custom_pattern_path`](#obj-specfiltersparserparserspatternscustom_pattern_path)
+            * [`fn withValue(value)`](#fn-specfiltersparserparserspatternscustom_pattern_pathwithvalue)
+            * [`obj spec.filters.parser.parsers.patterns.custom_pattern_path.mountFrom`](#obj-specfiltersparserparserspatternscustom_pattern_pathmountfrom)
+              * [`obj spec.filters.parser.parsers.patterns.custom_pattern_path.mountFrom.secretKeyRef`](#obj-specfiltersparserparserspatternscustom_pattern_pathmountfromsecretkeyref)
+                * [`fn withKey(key)`](#fn-specfiltersparserparserspatternscustom_pattern_pathmountfromsecretkeyrefwithkey)
+                * [`fn withName(name)`](#fn-specfiltersparserparserspatternscustom_pattern_pathmountfromsecretkeyrefwithname)
+                * [`fn withOptional(optional)`](#fn-specfiltersparserparserspatternscustom_pattern_pathmountfromsecretkeyrefwithoptional)
+            * [`obj spec.filters.parser.parsers.patterns.custom_pattern_path.valueFrom`](#obj-specfiltersparserparserspatternscustom_pattern_pathvaluefrom)
+              * [`obj spec.filters.parser.parsers.patterns.custom_pattern_path.valueFrom.secretKeyRef`](#obj-specfiltersparserparserspatternscustom_pattern_pathvaluefromsecretkeyref)
+                * [`fn withKey(key)`](#fn-specfiltersparserparserspatternscustom_pattern_pathvaluefromsecretkeyrefwithkey)
+                * [`fn withName(name)`](#fn-specfiltersparserparserspatternscustom_pattern_pathvaluefromsecretkeyrefwithname)
+                * [`fn withOptional(optional)`](#fn-specfiltersparserparserspatternscustom_pattern_pathvaluefromsecretkeyrefwithoptional)
+          * [`obj spec.filters.parser.parsers.patterns.grok_patterns`](#obj-specfiltersparserparserspatternsgrok_patterns)
+            * [`fn withKeep_time_key(keep_time_key)`](#fn-specfiltersparserparserspatternsgrok_patternswithkeep_time_key)
+            * [`fn withName(name)`](#fn-specfiltersparserparserspatternsgrok_patternswithname)
+            * [`fn withPattern(pattern)`](#fn-specfiltersparserparserspatternsgrok_patternswithpattern)
+            * [`fn withTime_format(time_format)`](#fn-specfiltersparserparserspatternsgrok_patternswithtime_format)
+            * [`fn withTime_key(time_key)`](#fn-specfiltersparserparserspatternsgrok_patternswithtime_key)
+            * [`fn withTimezone(timezone)`](#fn-specfiltersparserparserspatternsgrok_patternswithtimezone)
     * [`obj spec.filters.prometheus`](#obj-specfiltersprometheus)
       * [`fn withLabels(labels)`](#fn-specfiltersprometheuswithlabels)
       * [`fn withLabelsMixin(labels)`](#fn-specfiltersprometheuswithlabelsmixin)
@@ -332,6 +440,7 @@ permalink: /3.17.3/logging/v1alpha1/flow/
       * [`fn withTracing_pod_id(tracing_pod_id)`](#fn-specfilterssumologicwithtracing_pod_id)
     * [`obj spec.filters.tag_normaliser`](#obj-specfilterstag_normaliser)
       * [`fn withFormat(format)`](#fn-specfilterstag_normaliserwithformat)
+      * [`fn withMatch_tag(match_tag)`](#fn-specfilterstag_normaliserwithmatch_tag)
     * [`obj spec.filters.throttle`](#obj-specfiltersthrottle)
       * [`fn withGroup_bucket_limit(group_bucket_limit)`](#fn-specfiltersthrottlewithgroup_bucket_limit)
       * [`fn withGroup_bucket_period_s(group_bucket_period_s)`](#fn-specfiltersthrottlewithgroup_bucket_period_s)
@@ -347,6 +456,8 @@ permalink: /3.17.3/logging/v1alpha1/flow/
       * [`fn withHostsMixin(hosts)`](#fn-specmatchexcludewithhostsmixin)
       * [`fn withLabels(labels)`](#fn-specmatchexcludewithlabels)
       * [`fn withLabelsMixin(labels)`](#fn-specmatchexcludewithlabelsmixin)
+      * [`fn withNamespaces(namespaces)`](#fn-specmatchexcludewithnamespaces)
+      * [`fn withNamespacesMixin(namespaces)`](#fn-specmatchexcludewithnamespacesmixin)
     * [`obj spec.match.select`](#obj-specmatchselect)
       * [`fn withContainer_names(container_names)`](#fn-specmatchselectwithcontainer_names)
       * [`fn withContainer_namesMixin(container_names)`](#fn-specmatchselectwithcontainer_namesmixin)
@@ -354,6 +465,8 @@ permalink: /3.17.3/logging/v1alpha1/flow/
       * [`fn withHostsMixin(hosts)`](#fn-specmatchselectwithhostsmixin)
       * [`fn withLabels(labels)`](#fn-specmatchselectwithlabels)
       * [`fn withLabelsMixin(labels)`](#fn-specmatchselectwithlabelsmixin)
+      * [`fn withNamespaces(namespaces)`](#fn-specmatchselectwithnamespaces)
+      * [`fn withNamespacesMixin(namespaces)`](#fn-specmatchselectwithnamespacesmixin)
 
 ## Fields
 
@@ -363,7 +476,7 @@ permalink: /3.17.3/logging/v1alpha1/flow/
 new(name)
 ```
 
-new returns an instance of Flow
+new returns an instance of ClusterFlow
 
 ## obj metadata
 
@@ -563,24 +676,6 @@ withGlobalOutputRefs(globalOutputRefs)
 
 ```ts
 withGlobalOutputRefsMixin(globalOutputRefs)
-```
-
-
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.withLocalOutputRefs
-
-```ts
-withLocalOutputRefs(localOutputRefs)
-```
-
-
-
-### fn spec.withLocalOutputRefsMixin
-
-```ts
-withLocalOutputRefsMixin(localOutputRefs)
 ```
 
 
@@ -827,6 +922,14 @@ withLanguagesMixin(languages)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.filters.detectExceptions.withMatch_tag
+
+```ts
+withMatch_tag(match_tag)
+```
+
+
+
 ### fn spec.filters.detectExceptions.withMax_bytes
 
 ```ts
@@ -871,6 +974,74 @@ withRemove_tag_prefix(remove_tag_prefix)
 
 ```ts
 withStream(stream)
+```
+
+
+
+## obj spec.filters.elasticsearch_genid
+
+
+
+### fn spec.filters.elasticsearch_genid.withHash_id_key
+
+```ts
+withHash_id_key(hash_id_key)
+```
+
+
+
+### fn spec.filters.elasticsearch_genid.withHash_type
+
+```ts
+withHash_type(hash_type)
+```
+
+
+
+### fn spec.filters.elasticsearch_genid.withInclude_tag_in_seed
+
+```ts
+withInclude_tag_in_seed(include_tag_in_seed)
+```
+
+
+
+### fn spec.filters.elasticsearch_genid.withInclude_time_in_seed
+
+```ts
+withInclude_time_in_seed(include_time_in_seed)
+```
+
+
+
+### fn spec.filters.elasticsearch_genid.withRecord_keys
+
+```ts
+withRecord_keys(record_keys)
+```
+
+
+
+### fn spec.filters.elasticsearch_genid.withSeparator
+
+```ts
+withSeparator(separator)
+```
+
+
+
+### fn spec.filters.elasticsearch_genid.withUse_entire_record
+
+```ts
+withUse_entire_record(use_entire_record)
+```
+
+
+
+### fn spec.filters.elasticsearch_genid.withUse_record_as_seed
+
+```ts
+withUse_record_as_seed(use_record_as_seed)
 ```
 
 
@@ -1765,6 +1936,48 @@ withFormat_firstline(format_firstline)
 
 
 
+### fn spec.filters.parser.parse.withGrok_failure_key
+
+```ts
+withGrok_failure_key(grok_failure_key)
+```
+
+
+
+### fn spec.filters.parser.parse.withGrok_name_key
+
+```ts
+withGrok_name_key(grok_name_key)
+```
+
+
+
+### fn spec.filters.parser.parse.withGrok_pattern
+
+```ts
+withGrok_pattern(grok_pattern)
+```
+
+
+
+### fn spec.filters.parser.parse.withGrok_patterns
+
+```ts
+withGrok_patterns(grok_patterns)
+```
+
+
+
+### fn spec.filters.parser.parse.withGrok_patternsMixin
+
+```ts
+withGrok_patternsMixin(grok_patterns)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.filters.parser.parse.withKeep_time_key
 
 ```ts
@@ -1814,6 +2027,14 @@ withMultilineMixin(multiline)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.filters.parser.parse.withMultiline_start_regexp
+
+```ts
+withMultiline_start_regexp(multiline_start_regexp)
+```
+
+
 
 ### fn spec.filters.parser.parse.withNull_empty_string
 
@@ -1905,6 +2126,134 @@ withUtc(utc)
 
 
 
+## obj spec.filters.parser.parse.custom_pattern_path
+
+
+
+### fn spec.filters.parser.parse.custom_pattern_path.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.filters.parser.parse.custom_pattern_path.mountFrom
+
+
+
+## obj spec.filters.parser.parse.custom_pattern_path.mountFrom.secretKeyRef
+
+
+
+### fn spec.filters.parser.parse.custom_pattern_path.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.filters.parser.parse.custom_pattern_path.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parse.custom_pattern_path.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.filters.parser.parse.custom_pattern_path.valueFrom
+
+
+
+## obj spec.filters.parser.parse.custom_pattern_path.valueFrom.secretKeyRef
+
+
+
+### fn spec.filters.parser.parse.custom_pattern_path.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.filters.parser.parse.custom_pattern_path.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parse.custom_pattern_path.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.filters.parser.parse.grok_patterns
+
+
+
+### fn spec.filters.parser.parse.grok_patterns.withKeep_time_key
+
+```ts
+withKeep_time_key(keep_time_key)
+```
+
+
+
+### fn spec.filters.parser.parse.grok_patterns.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parse.grok_patterns.withPattern
+
+```ts
+withPattern(pattern)
+```
+
+
+
+### fn spec.filters.parser.parse.grok_patterns.withTime_format
+
+```ts
+withTime_format(time_format)
+```
+
+
+
+### fn spec.filters.parser.parse.grok_patterns.withTime_key
+
+```ts
+withTime_key(time_key)
+```
+
+
+
+### fn spec.filters.parser.parse.grok_patterns.withTimezone
+
+```ts
+withTimezone(timezone)
+```
+
+
+
 ## obj spec.filters.parser.parse.patterns
 
 
@@ -1933,6 +2282,48 @@ withFormat(format)
 
 
 
+### fn spec.filters.parser.parse.patterns.withGrok_failure_key
+
+```ts
+withGrok_failure_key(grok_failure_key)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.withGrok_name_key
+
+```ts
+withGrok_name_key(grok_name_key)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.withGrok_pattern
+
+```ts
+withGrok_pattern(grok_pattern)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.withGrok_patterns
+
+```ts
+withGrok_patterns(grok_patterns)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.withGrok_patternsMixin
+
+```ts
+withGrok_patternsMixin(grok_patterns)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.filters.parser.parse.patterns.withKeep_time_key
 
 ```ts
@@ -1945,6 +2336,14 @@ withKeep_time_key(keep_time_key)
 
 ```ts
 withLocal_time(local_time)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.withMultiline_start_regexp
+
+```ts
+withMultiline_start_regexp(multiline_start_regexp)
 ```
 
 
@@ -2021,6 +2420,134 @@ withUtc(utc)
 
 
 
+## obj spec.filters.parser.parse.patterns.custom_pattern_path
+
+
+
+### fn spec.filters.parser.parse.patterns.custom_pattern_path.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.filters.parser.parse.patterns.custom_pattern_path.mountFrom
+
+
+
+## obj spec.filters.parser.parse.patterns.custom_pattern_path.mountFrom.secretKeyRef
+
+
+
+### fn spec.filters.parser.parse.patterns.custom_pattern_path.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.custom_pattern_path.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.custom_pattern_path.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.filters.parser.parse.patterns.custom_pattern_path.valueFrom
+
+
+
+## obj spec.filters.parser.parse.patterns.custom_pattern_path.valueFrom.secretKeyRef
+
+
+
+### fn spec.filters.parser.parse.patterns.custom_pattern_path.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.custom_pattern_path.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.custom_pattern_path.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.filters.parser.parse.patterns.grok_patterns
+
+
+
+### fn spec.filters.parser.parse.patterns.grok_patterns.withKeep_time_key
+
+```ts
+withKeep_time_key(keep_time_key)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.grok_patterns.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.grok_patterns.withPattern
+
+```ts
+withPattern(pattern)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.grok_patterns.withTime_format
+
+```ts
+withTime_format(time_format)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.grok_patterns.withTime_key
+
+```ts
+withTime_key(time_key)
+```
+
+
+
+### fn spec.filters.parser.parse.patterns.grok_patterns.withTimezone
+
+```ts
+withTimezone(timezone)
+```
+
+
+
 ## obj spec.filters.parser.parsers
 
 
@@ -2073,6 +2600,48 @@ withFormat_firstline(format_firstline)
 
 
 
+### fn spec.filters.parser.parsers.withGrok_failure_key
+
+```ts
+withGrok_failure_key(grok_failure_key)
+```
+
+
+
+### fn spec.filters.parser.parsers.withGrok_name_key
+
+```ts
+withGrok_name_key(grok_name_key)
+```
+
+
+
+### fn spec.filters.parser.parsers.withGrok_pattern
+
+```ts
+withGrok_pattern(grok_pattern)
+```
+
+
+
+### fn spec.filters.parser.parsers.withGrok_patterns
+
+```ts
+withGrok_patterns(grok_patterns)
+```
+
+
+
+### fn spec.filters.parser.parsers.withGrok_patternsMixin
+
+```ts
+withGrok_patternsMixin(grok_patterns)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.filters.parser.parsers.withKeep_time_key
 
 ```ts
@@ -2122,6 +2691,14 @@ withMultilineMixin(multiline)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.filters.parser.parsers.withMultiline_start_regexp
+
+```ts
+withMultiline_start_regexp(multiline_start_regexp)
+```
+
+
 
 ### fn spec.filters.parser.parsers.withNull_empty_string
 
@@ -2213,6 +2790,134 @@ withUtc(utc)
 
 
 
+## obj spec.filters.parser.parsers.custom_pattern_path
+
+
+
+### fn spec.filters.parser.parsers.custom_pattern_path.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.filters.parser.parsers.custom_pattern_path.mountFrom
+
+
+
+## obj spec.filters.parser.parsers.custom_pattern_path.mountFrom.secretKeyRef
+
+
+
+### fn spec.filters.parser.parsers.custom_pattern_path.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.filters.parser.parsers.custom_pattern_path.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parsers.custom_pattern_path.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.filters.parser.parsers.custom_pattern_path.valueFrom
+
+
+
+## obj spec.filters.parser.parsers.custom_pattern_path.valueFrom.secretKeyRef
+
+
+
+### fn spec.filters.parser.parsers.custom_pattern_path.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.filters.parser.parsers.custom_pattern_path.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parsers.custom_pattern_path.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.filters.parser.parsers.grok_patterns
+
+
+
+### fn spec.filters.parser.parsers.grok_patterns.withKeep_time_key
+
+```ts
+withKeep_time_key(keep_time_key)
+```
+
+
+
+### fn spec.filters.parser.parsers.grok_patterns.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parsers.grok_patterns.withPattern
+
+```ts
+withPattern(pattern)
+```
+
+
+
+### fn spec.filters.parser.parsers.grok_patterns.withTime_format
+
+```ts
+withTime_format(time_format)
+```
+
+
+
+### fn spec.filters.parser.parsers.grok_patterns.withTime_key
+
+```ts
+withTime_key(time_key)
+```
+
+
+
+### fn spec.filters.parser.parsers.grok_patterns.withTimezone
+
+```ts
+withTimezone(timezone)
+```
+
+
+
 ## obj spec.filters.parser.parsers.patterns
 
 
@@ -2241,6 +2946,48 @@ withFormat(format)
 
 
 
+### fn spec.filters.parser.parsers.patterns.withGrok_failure_key
+
+```ts
+withGrok_failure_key(grok_failure_key)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.withGrok_name_key
+
+```ts
+withGrok_name_key(grok_name_key)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.withGrok_pattern
+
+```ts
+withGrok_pattern(grok_pattern)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.withGrok_patterns
+
+```ts
+withGrok_patterns(grok_patterns)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.withGrok_patternsMixin
+
+```ts
+withGrok_patternsMixin(grok_patterns)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ### fn spec.filters.parser.parsers.patterns.withKeep_time_key
 
 ```ts
@@ -2253,6 +3000,14 @@ withKeep_time_key(keep_time_key)
 
 ```ts
 withLocal_time(local_time)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.withMultiline_start_regexp
+
+```ts
+withMultiline_start_regexp(multiline_start_regexp)
 ```
 
 
@@ -2325,6 +3080,134 @@ withTypes(types)
 
 ```ts
 withUtc(utc)
+```
+
+
+
+## obj spec.filters.parser.parsers.patterns.custom_pattern_path
+
+
+
+### fn spec.filters.parser.parsers.patterns.custom_pattern_path.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.filters.parser.parsers.patterns.custom_pattern_path.mountFrom
+
+
+
+## obj spec.filters.parser.parsers.patterns.custom_pattern_path.mountFrom.secretKeyRef
+
+
+
+### fn spec.filters.parser.parsers.patterns.custom_pattern_path.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.custom_pattern_path.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.custom_pattern_path.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.filters.parser.parsers.patterns.custom_pattern_path.valueFrom
+
+
+
+## obj spec.filters.parser.parsers.patterns.custom_pattern_path.valueFrom.secretKeyRef
+
+
+
+### fn spec.filters.parser.parsers.patterns.custom_pattern_path.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.custom_pattern_path.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.custom_pattern_path.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.filters.parser.parsers.patterns.grok_patterns
+
+
+
+### fn spec.filters.parser.parsers.patterns.grok_patterns.withKeep_time_key
+
+```ts
+withKeep_time_key(keep_time_key)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.grok_patterns.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.grok_patterns.withPattern
+
+```ts
+withPattern(pattern)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.grok_patterns.withTime_format
+
+```ts
+withTime_format(time_format)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.grok_patterns.withTime_key
+
+```ts
+withTime_key(time_key)
+```
+
+
+
+### fn spec.filters.parser.parsers.patterns.grok_patterns.withTimezone
+
+```ts
+withTimezone(timezone)
 ```
 
 
@@ -2837,6 +3720,14 @@ withFormat(format)
 
 
 
+### fn spec.filters.tag_normaliser.withMatch_tag
+
+```ts
+withMatch_tag(match_tag)
+```
+
+
+
 ## obj spec.filters.throttle
 
 
@@ -2951,6 +3842,24 @@ withLabelsMixin(labels)
 
 **Note:** This function appends passed data to existing values
 
+### fn spec.match.exclude.withNamespaces
+
+```ts
+withNamespaces(namespaces)
+```
+
+
+
+### fn spec.match.exclude.withNamespacesMixin
+
+```ts
+withNamespacesMixin(namespaces)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
 ## obj spec.match.select
 
 
@@ -3003,6 +3912,24 @@ withLabels(labels)
 
 ```ts
 withLabelsMixin(labels)
+```
+
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.match.select.withNamespaces
+
+```ts
+withNamespaces(namespaces)
+```
+
+
+
+### fn spec.match.select.withNamespacesMixin
+
+```ts
+withNamespacesMixin(namespaces)
 ```
 
 

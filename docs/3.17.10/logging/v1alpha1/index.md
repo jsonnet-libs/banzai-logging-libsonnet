@@ -1,8 +1,8 @@
 ---
-permalink: /3.17.3/logging/v1beta1/
+permalink: /3.17.10/logging/v1alpha1/
 ---
 
-# logging.v1beta1
+# logging.v1alpha1
 
 
 

@@ -1,5 +1,5 @@
 ---
-permalink: /3.17.3/logging/
+permalink: /3.17.10/logging/
 ---
 
 # logging

@@ -1,8 +1,8 @@
 ---
-permalink: /3.17.3/logging/v1beta1/clusterOutput/
+permalink: /3.17.10/logging/v1alpha1/output/
 ---
 
-# logging.v1beta1.clusterOutput
+# logging.v1alpha1.output
 
 
 
@@ -56,19 +56,106 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
           * [`fn withKey(key)`](#fn-specnewreliclicense_keyvaluefromsecretkeyrefwithkey)
           * [`fn withName(name)`](#fn-specnewreliclicense_keyvaluefromsecretkeyrefwithname)
           * [`fn withOptional(optional)`](#fn-specnewreliclicense_keyvaluefromsecretkeyrefwithoptional)
-  * [`fn withEnabledNamespaces(enabledNamespaces)`](#fn-specwithenablednamespaces)
-  * [`fn withEnabledNamespacesMixin(enabledNamespaces)`](#fn-specwithenablednamespacesmixin)
   * [`fn withLoggingRef(loggingRef)`](#fn-specwithloggingref)
   * [`fn withNullout(nullout)`](#fn-specwithnullout)
   * [`fn withNulloutMixin(nullout)`](#fn-specwithnulloutmixin)
   * [`obj spec.awsElasticsearch`](#obj-specawselasticsearch)
+    * [`fn withApplication_name(application_name)`](#fn-specawselasticsearchwithapplication_name)
+    * [`fn withBulk_message_request_threshold(bulk_message_request_threshold)`](#fn-specawselasticsearchwithbulk_message_request_threshold)
+    * [`fn withContent_type(content_type)`](#fn-specawselasticsearchwithcontent_type)
+    * [`fn withCustom_headers(custom_headers)`](#fn-specawselasticsearchwithcustom_headers)
+    * [`fn withCustomize_template(customize_template)`](#fn-specawselasticsearchwithcustomize_template)
+    * [`fn withData_stream_enable(data_stream_enable)`](#fn-specawselasticsearchwithdata_stream_enable)
+    * [`fn withData_stream_ilm_name(data_stream_ilm_name)`](#fn-specawselasticsearchwithdata_stream_ilm_name)
+    * [`fn withData_stream_ilm_policy(data_stream_ilm_policy)`](#fn-specawselasticsearchwithdata_stream_ilm_policy)
+    * [`fn withData_stream_ilm_policy_overwrite(data_stream_ilm_policy_overwrite)`](#fn-specawselasticsearchwithdata_stream_ilm_policy_overwrite)
+    * [`fn withData_stream_name(data_stream_name)`](#fn-specawselasticsearchwithdata_stream_name)
+    * [`fn withData_stream_template_name(data_stream_template_name)`](#fn-specawselasticsearchwithdata_stream_template_name)
+    * [`fn withDefault_elasticsearch_version(default_elasticsearch_version)`](#fn-specawselasticsearchwithdefault_elasticsearch_version)
+    * [`fn withDeflector_alias(deflector_alias)`](#fn-specawselasticsearchwithdeflector_alias)
+    * [`fn withEnable_ilm(enable_ilm)`](#fn-specawselasticsearchwithenable_ilm)
+    * [`fn withException_backup(exception_backup)`](#fn-specawselasticsearchwithexception_backup)
+    * [`fn withFail_on_detecting_es_version_retry_exceed(fail_on_detecting_es_version_retry_exceed)`](#fn-specawselasticsearchwithfail_on_detecting_es_version_retry_exceed)
+    * [`fn withFail_on_putting_template_retry_exceed(fail_on_putting_template_retry_exceed)`](#fn-specawselasticsearchwithfail_on_putting_template_retry_exceed)
+    * [`fn withFlatten_hashes(flatten_hashes)`](#fn-specawselasticsearchwithflatten_hashes)
+    * [`fn withFlatten_hashes_separator(flatten_hashes_separator)`](#fn-specawselasticsearchwithflatten_hashes_separator)
     * [`fn withFlush_interval(flush_interval)`](#fn-specawselasticsearchwithflush_interval)
+    * [`fn withHost(host)`](#fn-specawselasticsearchwithhost)
+    * [`fn withHosts(hosts)`](#fn-specawselasticsearchwithhosts)
+    * [`fn withHttp_backend(http_backend)`](#fn-specawselasticsearchwithhttp_backend)
+    * [`fn withId_key(id_key)`](#fn-specawselasticsearchwithid_key)
+    * [`fn withIgnore_exceptions(ignore_exceptions)`](#fn-specawselasticsearchwithignore_exceptions)
+    * [`fn withIlm_policy(ilm_policy)`](#fn-specawselasticsearchwithilm_policy)
+    * [`fn withIlm_policy_id(ilm_policy_id)`](#fn-specawselasticsearchwithilm_policy_id)
+    * [`fn withIlm_policy_overwrite(ilm_policy_overwrite)`](#fn-specawselasticsearchwithilm_policy_overwrite)
+    * [`fn withInclude_index_in_url(include_index_in_url)`](#fn-specawselasticsearchwithinclude_index_in_url)
     * [`fn withInclude_tag_key(include_tag_key)`](#fn-specawselasticsearchwithinclude_tag_key)
     * [`fn withInclude_timestamp(include_timestamp)`](#fn-specawselasticsearchwithinclude_timestamp)
+    * [`fn withIndex_date_pattern(index_date_pattern)`](#fn-specawselasticsearchwithindex_date_pattern)
     * [`fn withIndex_name(index_name)`](#fn-specawselasticsearchwithindex_name)
+    * [`fn withIndex_prefix(index_prefix)`](#fn-specawselasticsearchwithindex_prefix)
+    * [`fn withLog_es_400_reason(log_es_400_reason)`](#fn-specawselasticsearchwithlog_es_400_reason)
+    * [`fn withLogstash_dateformat(logstash_dateformat)`](#fn-specawselasticsearchwithlogstash_dateformat)
     * [`fn withLogstash_format(logstash_format)`](#fn-specawselasticsearchwithlogstash_format)
     * [`fn withLogstash_prefix(logstash_prefix)`](#fn-specawselasticsearchwithlogstash_prefix)
+    * [`fn withLogstash_prefix_separator(logstash_prefix_separator)`](#fn-specawselasticsearchwithlogstash_prefix_separator)
+    * [`fn withMax_retry_get_es_version(max_retry_get_es_version)`](#fn-specawselasticsearchwithmax_retry_get_es_version)
+    * [`fn withMax_retry_putting_template(max_retry_putting_template)`](#fn-specawselasticsearchwithmax_retry_putting_template)
+    * [`fn withPath(path)`](#fn-specawselasticsearchwithpath)
+    * [`fn withPipeline(pipeline)`](#fn-specawselasticsearchwithpipeline)
+    * [`fn withPort(port)`](#fn-specawselasticsearchwithport)
+    * [`fn withPrefer_oj_serializer(prefer_oj_serializer)`](#fn-specawselasticsearchwithprefer_oj_serializer)
+    * [`fn withReconnect_on_error(reconnect_on_error)`](#fn-specawselasticsearchwithreconnect_on_error)
+    * [`fn withReload_after(reload_after)`](#fn-specawselasticsearchwithreload_after)
+    * [`fn withReload_connections(reload_connections)`](#fn-specawselasticsearchwithreload_connections)
+    * [`fn withReload_on_failure(reload_on_failure)`](#fn-specawselasticsearchwithreload_on_failure)
+    * [`fn withRemove_keys(remove_keys)`](#fn-specawselasticsearchwithremove_keys)
+    * [`fn withRemove_keys_on_update(remove_keys_on_update)`](#fn-specawselasticsearchwithremove_keys_on_update)
+    * [`fn withRemove_keys_on_update_key(remove_keys_on_update_key)`](#fn-specawselasticsearchwithremove_keys_on_update_key)
+    * [`fn withRequest_timeout(request_timeout)`](#fn-specawselasticsearchwithrequest_timeout)
+    * [`fn withResurrect_after(resurrect_after)`](#fn-specawselasticsearchwithresurrect_after)
+    * [`fn withRetry_tag(retry_tag)`](#fn-specawselasticsearchwithretry_tag)
+    * [`fn withRollover_index(rollover_index)`](#fn-specawselasticsearchwithrollover_index)
+    * [`fn withRouting_key(routing_key)`](#fn-specawselasticsearchwithrouting_key)
+    * [`fn withScheme(scheme)`](#fn-specawselasticsearchwithscheme)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specawselasticsearchwithslow_flush_log_threshold)
+    * [`fn withSniffer_class_name(sniffer_class_name)`](#fn-specawselasticsearchwithsniffer_class_name)
+    * [`fn withSsl_max_version(ssl_max_version)`](#fn-specawselasticsearchwithssl_max_version)
+    * [`fn withSsl_min_version(ssl_min_version)`](#fn-specawselasticsearchwithssl_min_version)
+    * [`fn withSsl_verify(ssl_verify)`](#fn-specawselasticsearchwithssl_verify)
+    * [`fn withSsl_version(ssl_version)`](#fn-specawselasticsearchwithssl_version)
+    * [`fn withSuppress_doc_wrap(suppress_doc_wrap)`](#fn-specawselasticsearchwithsuppress_doc_wrap)
+    * [`fn withSuppress_type_name(suppress_type_name)`](#fn-specawselasticsearchwithsuppress_type_name)
     * [`fn withTag_key(tag_key)`](#fn-specawselasticsearchwithtag_key)
+    * [`fn withTarget_index_key(target_index_key)`](#fn-specawselasticsearchwithtarget_index_key)
+    * [`fn withTarget_type_key(target_type_key)`](#fn-specawselasticsearchwithtarget_type_key)
+    * [`fn withTemplate_name(template_name)`](#fn-specawselasticsearchwithtemplate_name)
+    * [`fn withTemplate_overwrite(template_overwrite)`](#fn-specawselasticsearchwithtemplate_overwrite)
+    * [`fn withTemplates(templates)`](#fn-specawselasticsearchwithtemplates)
+    * [`fn withTime_key(time_key)`](#fn-specawselasticsearchwithtime_key)
+    * [`fn withTime_key_format(time_key_format)`](#fn-specawselasticsearchwithtime_key_format)
+    * [`fn withTime_parse_error_tag(time_parse_error_tag)`](#fn-specawselasticsearchwithtime_parse_error_tag)
+    * [`fn withTime_precision(time_precision)`](#fn-specawselasticsearchwithtime_precision)
+    * [`fn withType_name(type_name)`](#fn-specawselasticsearchwithtype_name)
+    * [`fn withUnrecoverable_error_types(unrecoverable_error_types)`](#fn-specawselasticsearchwithunrecoverable_error_types)
+    * [`fn withUser(user)`](#fn-specawselasticsearchwithuser)
+    * [`fn withUtc_index(utc_index)`](#fn-specawselasticsearchwithutc_index)
+    * [`fn withValidate_client_version(validate_client_version)`](#fn-specawselasticsearchwithvalidate_client_version)
+    * [`fn withVerify_es_version_at_startup(verify_es_version_at_startup)`](#fn-specawselasticsearchwithverify_es_version_at_startup)
+    * [`fn withWith_transporter_log(with_transporter_log)`](#fn-specawselasticsearchwithwith_transporter_log)
+    * [`fn withWrite_operation(write_operation)`](#fn-specawselasticsearchwithwrite_operation)
+    * [`obj spec.awsElasticsearch.api_key`](#obj-specawselasticsearchapi_key)
+      * [`fn withValue(value)`](#fn-specawselasticsearchapi_keywithvalue)
+      * [`obj spec.awsElasticsearch.api_key.mountFrom`](#obj-specawselasticsearchapi_keymountfrom)
+        * [`obj spec.awsElasticsearch.api_key.mountFrom.secretKeyRef`](#obj-specawselasticsearchapi_keymountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchapi_keymountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchapi_keymountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchapi_keymountfromsecretkeyrefwithoptional)
+      * [`obj spec.awsElasticsearch.api_key.valueFrom`](#obj-specawselasticsearchapi_keyvaluefrom)
+        * [`obj spec.awsElasticsearch.api_key.valueFrom.secretKeyRef`](#obj-specawselasticsearchapi_keyvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchapi_keyvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchapi_keyvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchapi_keyvaluefromsecretkeyrefwithoptional)
     * [`obj spec.awsElasticsearch.buffer`](#obj-specawselasticsearchbuffer)
       * [`fn withChunk_full_threshold(chunk_full_threshold)`](#fn-specawselasticsearchbufferwithchunk_full_threshold)
       * [`fn withChunk_limit_records(chunk_limit_records)`](#fn-specawselasticsearchbufferwithchunk_limit_records)
@@ -103,6 +190,54 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
       * [`fn withTimekey_zone(timekey_zone)`](#fn-specawselasticsearchbufferwithtimekey_zone)
       * [`fn withTotal_limit_size(total_limit_size)`](#fn-specawselasticsearchbufferwithtotal_limit_size)
       * [`fn withType(type)`](#fn-specawselasticsearchbufferwithtype)
+    * [`obj spec.awsElasticsearch.ca_file`](#obj-specawselasticsearchca_file)
+      * [`fn withValue(value)`](#fn-specawselasticsearchca_filewithvalue)
+      * [`obj spec.awsElasticsearch.ca_file.mountFrom`](#obj-specawselasticsearchca_filemountfrom)
+        * [`obj spec.awsElasticsearch.ca_file.mountFrom.secretKeyRef`](#obj-specawselasticsearchca_filemountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchca_filemountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchca_filemountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchca_filemountfromsecretkeyrefwithoptional)
+      * [`obj spec.awsElasticsearch.ca_file.valueFrom`](#obj-specawselasticsearchca_filevaluefrom)
+        * [`obj spec.awsElasticsearch.ca_file.valueFrom.secretKeyRef`](#obj-specawselasticsearchca_filevaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchca_filevaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchca_filevaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchca_filevaluefromsecretkeyrefwithoptional)
+    * [`obj spec.awsElasticsearch.client_cert`](#obj-specawselasticsearchclient_cert)
+      * [`fn withValue(value)`](#fn-specawselasticsearchclient_certwithvalue)
+      * [`obj spec.awsElasticsearch.client_cert.mountFrom`](#obj-specawselasticsearchclient_certmountfrom)
+        * [`obj spec.awsElasticsearch.client_cert.mountFrom.secretKeyRef`](#obj-specawselasticsearchclient_certmountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchclient_certmountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchclient_certmountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchclient_certmountfromsecretkeyrefwithoptional)
+      * [`obj spec.awsElasticsearch.client_cert.valueFrom`](#obj-specawselasticsearchclient_certvaluefrom)
+        * [`obj spec.awsElasticsearch.client_cert.valueFrom.secretKeyRef`](#obj-specawselasticsearchclient_certvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchclient_certvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchclient_certvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchclient_certvaluefromsecretkeyrefwithoptional)
+    * [`obj spec.awsElasticsearch.client_key`](#obj-specawselasticsearchclient_key)
+      * [`fn withValue(value)`](#fn-specawselasticsearchclient_keywithvalue)
+      * [`obj spec.awsElasticsearch.client_key.mountFrom`](#obj-specawselasticsearchclient_keymountfrom)
+        * [`obj spec.awsElasticsearch.client_key.mountFrom.secretKeyRef`](#obj-specawselasticsearchclient_keymountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchclient_keymountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchclient_keymountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchclient_keymountfromsecretkeyrefwithoptional)
+      * [`obj spec.awsElasticsearch.client_key.valueFrom`](#obj-specawselasticsearchclient_keyvaluefrom)
+        * [`obj spec.awsElasticsearch.client_key.valueFrom.secretKeyRef`](#obj-specawselasticsearchclient_keyvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchclient_keyvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchclient_keyvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchclient_keyvaluefromsecretkeyrefwithoptional)
+    * [`obj spec.awsElasticsearch.client_key_pass`](#obj-specawselasticsearchclient_key_pass)
+      * [`fn withValue(value)`](#fn-specawselasticsearchclient_key_passwithvalue)
+      * [`obj spec.awsElasticsearch.client_key_pass.mountFrom`](#obj-specawselasticsearchclient_key_passmountfrom)
+        * [`obj spec.awsElasticsearch.client_key_pass.mountFrom.secretKeyRef`](#obj-specawselasticsearchclient_key_passmountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchclient_key_passmountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchclient_key_passmountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchclient_key_passmountfromsecretkeyrefwithoptional)
+      * [`obj spec.awsElasticsearch.client_key_pass.valueFrom`](#obj-specawselasticsearchclient_key_passvaluefrom)
+        * [`obj spec.awsElasticsearch.client_key_pass.valueFrom.secretKeyRef`](#obj-specawselasticsearchclient_key_passvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchclient_key_passvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchclient_key_passvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchclient_key_passvaluefromsecretkeyrefwithoptional)
     * [`obj spec.awsElasticsearch.endpoint`](#obj-specawselasticsearchendpoint)
       * [`fn withRegion(region)`](#fn-specawselasticsearchendpointwithregion)
       * [`fn withUrl(url)`](#fn-specawselasticsearchendpointwithurl)
@@ -194,6 +329,30 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
       * [`fn withAdd_newline(add_newline)`](#fn-specawselasticsearchformatwithadd_newline)
       * [`fn withMessage_key(message_key)`](#fn-specawselasticsearchformatwithmessage_key)
       * [`fn withType(type)`](#fn-specawselasticsearchformatwithtype)
+    * [`obj spec.awsElasticsearch.password`](#obj-specawselasticsearchpassword)
+      * [`fn withValue(value)`](#fn-specawselasticsearchpasswordwithvalue)
+      * [`obj spec.awsElasticsearch.password.mountFrom`](#obj-specawselasticsearchpasswordmountfrom)
+        * [`obj spec.awsElasticsearch.password.mountFrom.secretKeyRef`](#obj-specawselasticsearchpasswordmountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchpasswordmountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchpasswordmountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchpasswordmountfromsecretkeyrefwithoptional)
+      * [`obj spec.awsElasticsearch.password.valueFrom`](#obj-specawselasticsearchpasswordvaluefrom)
+        * [`obj spec.awsElasticsearch.password.valueFrom.secretKeyRef`](#obj-specawselasticsearchpasswordvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchpasswordvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchpasswordvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchpasswordvaluefromsecretkeyrefwithoptional)
+    * [`obj spec.awsElasticsearch.template_file`](#obj-specawselasticsearchtemplate_file)
+      * [`fn withValue(value)`](#fn-specawselasticsearchtemplate_filewithvalue)
+      * [`obj spec.awsElasticsearch.template_file.mountFrom`](#obj-specawselasticsearchtemplate_filemountfrom)
+        * [`obj spec.awsElasticsearch.template_file.mountFrom.secretKeyRef`](#obj-specawselasticsearchtemplate_filemountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchtemplate_filemountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchtemplate_filemountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchtemplate_filemountfromsecretkeyrefwithoptional)
+      * [`obj spec.awsElasticsearch.template_file.valueFrom`](#obj-specawselasticsearchtemplate_filevaluefrom)
+        * [`obj spec.awsElasticsearch.template_file.valueFrom.secretKeyRef`](#obj-specawselasticsearchtemplate_filevaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specawselasticsearchtemplate_filevaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specawselasticsearchtemplate_filevaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specawselasticsearchtemplate_filevaluefromsecretkeyrefwithoptional)
   * [`obj spec.azurestorage`](#obj-specazurestorage)
     * [`fn withAuto_create_container(auto_create_container)`](#fn-specazurestoragewithauto_create_container)
     * [`fn withAzure_container(azure_container)`](#fn-specazurestoragewithazure_container)
@@ -201,6 +360,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withAzure_object_key_format(azure_object_key_format)`](#fn-specazurestoragewithazure_object_key_format)
     * [`fn withFormat(format)`](#fn-specazurestoragewithformat)
     * [`fn withPath(path)`](#fn-specazurestoragewithpath)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specazurestoragewithslow_flush_log_threshold)
     * [`obj spec.azurestorage.azure_storage_access_key`](#obj-specazurestorageazure_storage_access_key)
       * [`fn withValue(value)`](#fn-specazurestorageazure_storage_access_keywithvalue)
       * [`obj spec.azurestorage.azure_storage_access_key.mountFrom`](#obj-specazurestorageazure_storage_access_keymountfrom)
@@ -303,6 +463,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withRemove_retention_in_days(remove_retention_in_days)`](#fn-speccloudwatchwithremove_retention_in_days)
     * [`fn withRetention_in_days(retention_in_days)`](#fn-speccloudwatchwithretention_in_days)
     * [`fn withRetention_in_days_key(retention_in_days_key)`](#fn-speccloudwatchwithretention_in_days_key)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-speccloudwatchwithslow_flush_log_threshold)
     * [`fn withUse_tag_as_group(use_tag_as_group)`](#fn-speccloudwatchwithuse_tag_as_group)
     * [`fn withUse_tag_as_stream(use_tag_as_stream)`](#fn-speccloudwatchwithuse_tag_as_stream)
     * [`obj spec.cloudwatch.aws_key_id`](#obj-speccloudwatchaws_key_id)
@@ -380,6 +541,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withNo_ssl_validation(no_ssl_validation)`](#fn-specdatadogwithno_ssl_validation)
     * [`fn withPort(port)`](#fn-specdatadogwithport)
     * [`fn withService(service)`](#fn-specdatadogwithservice)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specdatadogwithslow_flush_log_threshold)
     * [`fn withSsl_port(ssl_port)`](#fn-specdatadogwithssl_port)
     * [`fn withTag_key(tag_key)`](#fn-specdatadogwithtag_key)
     * [`fn withTimestamp_key(timestamp_key)`](#fn-specdatadogwithtimestamp_key)
@@ -441,12 +603,15 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withCustomize_template(customize_template)`](#fn-specelasticsearchwithcustomize_template)
     * [`fn withData_stream_enable(data_stream_enable)`](#fn-specelasticsearchwithdata_stream_enable)
     * [`fn withData_stream_ilm_name(data_stream_ilm_name)`](#fn-specelasticsearchwithdata_stream_ilm_name)
+    * [`fn withData_stream_ilm_policy(data_stream_ilm_policy)`](#fn-specelasticsearchwithdata_stream_ilm_policy)
+    * [`fn withData_stream_ilm_policy_overwrite(data_stream_ilm_policy_overwrite)`](#fn-specelasticsearchwithdata_stream_ilm_policy_overwrite)
     * [`fn withData_stream_name(data_stream_name)`](#fn-specelasticsearchwithdata_stream_name)
     * [`fn withData_stream_template_name(data_stream_template_name)`](#fn-specelasticsearchwithdata_stream_template_name)
     * [`fn withDefault_elasticsearch_version(default_elasticsearch_version)`](#fn-specelasticsearchwithdefault_elasticsearch_version)
     * [`fn withDeflector_alias(deflector_alias)`](#fn-specelasticsearchwithdeflector_alias)
     * [`fn withEnable_ilm(enable_ilm)`](#fn-specelasticsearchwithenable_ilm)
     * [`fn withException_backup(exception_backup)`](#fn-specelasticsearchwithexception_backup)
+    * [`fn withFail_on_detecting_es_version_retry_exceed(fail_on_detecting_es_version_retry_exceed)`](#fn-specelasticsearchwithfail_on_detecting_es_version_retry_exceed)
     * [`fn withFail_on_putting_template_retry_exceed(fail_on_putting_template_retry_exceed)`](#fn-specelasticsearchwithfail_on_putting_template_retry_exceed)
     * [`fn withFlatten_hashes(flatten_hashes)`](#fn-specelasticsearchwithflatten_hashes)
     * [`fn withFlatten_hashes_separator(flatten_hashes_separator)`](#fn-specelasticsearchwithflatten_hashes_separator)
@@ -479,6 +644,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withReload_after(reload_after)`](#fn-specelasticsearchwithreload_after)
     * [`fn withReload_connections(reload_connections)`](#fn-specelasticsearchwithreload_connections)
     * [`fn withReload_on_failure(reload_on_failure)`](#fn-specelasticsearchwithreload_on_failure)
+    * [`fn withRemove_keys(remove_keys)`](#fn-specelasticsearchwithremove_keys)
     * [`fn withRemove_keys_on_update(remove_keys_on_update)`](#fn-specelasticsearchwithremove_keys_on_update)
     * [`fn withRemove_keys_on_update_key(remove_keys_on_update_key)`](#fn-specelasticsearchwithremove_keys_on_update_key)
     * [`fn withRequest_timeout(request_timeout)`](#fn-specelasticsearchwithrequest_timeout)
@@ -487,6 +653,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withRollover_index(rollover_index)`](#fn-specelasticsearchwithrollover_index)
     * [`fn withRouting_key(routing_key)`](#fn-specelasticsearchwithrouting_key)
     * [`fn withScheme(scheme)`](#fn-specelasticsearchwithscheme)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specelasticsearchwithslow_flush_log_threshold)
     * [`fn withSniffer_class_name(sniffer_class_name)`](#fn-specelasticsearchwithsniffer_class_name)
     * [`fn withSsl_max_version(ssl_max_version)`](#fn-specelasticsearchwithssl_max_version)
     * [`fn withSsl_min_version(ssl_min_version)`](#fn-specelasticsearchwithssl_min_version)
@@ -637,6 +804,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withPath(path)`](#fn-specfilewithpath)
     * [`fn withPath_suffix(path_suffix)`](#fn-specfilewithpath_suffix)
     * [`fn withRecompress(recompress)`](#fn-specfilewithrecompress)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specfilewithslow_flush_log_threshold)
     * [`fn withSymlink_path(symlink_path)`](#fn-specfilewithsymlink_path)
     * [`obj spec.file.buffer`](#obj-specfilebuffer)
       * [`fn withChunk_full_threshold(chunk_full_threshold)`](#fn-specfilebufferwithchunk_full_threshold)
@@ -694,6 +862,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withSend_timeout(send_timeout)`](#fn-specforwardwithsend_timeout)
     * [`fn withServers(servers)`](#fn-specforwardwithservers)
     * [`fn withServersMixin(servers)`](#fn-specforwardwithserversmixin)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specforwardwithslow_flush_log_threshold)
     * [`fn withTls_allow_self_signed_cert(tls_allow_self_signed_cert)`](#fn-specforwardwithtls_allow_self_signed_cert)
     * [`fn withTls_cert_logical_store_name(tls_cert_logical_store_name)`](#fn-specforwardwithtls_cert_logical_store_name)
     * [`fn withTls_cert_thumbprint(tls_cert_thumbprint)`](#fn-specforwardwithtls_cert_thumbprint)
@@ -848,6 +1017,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withOverwrite(overwrite)`](#fn-specgcswithoverwrite)
     * [`fn withPath(path)`](#fn-specgcswithpath)
     * [`fn withProject(project)`](#fn-specgcswithproject)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specgcswithslow_flush_log_threshold)
     * [`fn withStorage_class(storage_class)`](#fn-specgcswithstorage_class)
     * [`fn withStore_as(store_as)`](#fn-specgcswithstore_as)
     * [`fn withTranscoding(transcoding)`](#fn-specgcswithtranscoding)
@@ -924,6 +1094,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withRead_timeout(read_timeout)`](#fn-spechttpwithread_timeout)
     * [`fn withRetryable_response_codes(retryable_response_codes)`](#fn-spechttpwithretryable_response_codes)
     * [`fn withRetryable_response_codesMixin(retryable_response_codes)`](#fn-spechttpwithretryable_response_codesmixin)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-spechttpwithslow_flush_log_threshold)
     * [`fn withSsl_timeout(ssl_timeout)`](#fn-spechttpwithssl_timeout)
     * [`fn withTls_ciphers(tls_ciphers)`](#fn-spechttpwithtls_ciphers)
     * [`fn withTls_verify_mode(tls_verify_mode)`](#fn-spechttpwithtls_verify_mode)
@@ -1062,9 +1233,11 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withMessage_key_key(message_key_key)`](#fn-speckafkawithmessage_key_key)
     * [`fn withPartition_key(partition_key)`](#fn-speckafkawithpartition_key)
     * [`fn withPartition_key_key(partition_key_key)`](#fn-speckafkawithpartition_key_key)
+    * [`fn withPrincipal(principal)`](#fn-speckafkawithprincipal)
     * [`fn withRequired_acks(required_acks)`](#fn-speckafkawithrequired_acks)
     * [`fn withSasl_over_ssl(sasl_over_ssl)`](#fn-speckafkawithsasl_over_ssl)
     * [`fn withScram_mechanism(scram_mechanism)`](#fn-speckafkawithscram_mechanism)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-speckafkawithslow_flush_log_threshold)
     * [`fn withSsl_ca_certs_from_system(ssl_ca_certs_from_system)`](#fn-speckafkawithssl_ca_certs_from_system)
     * [`fn withSsl_verify_hostname(ssl_verify_hostname)`](#fn-speckafkawithssl_verify_hostname)
     * [`fn withTopic_key(topic_key)`](#fn-speckafkawithtopic_key)
@@ -1107,6 +1280,18 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
       * [`fn withAdd_newline(add_newline)`](#fn-speckafkaformatwithadd_newline)
       * [`fn withMessage_key(message_key)`](#fn-speckafkaformatwithmessage_key)
       * [`fn withType(type)`](#fn-speckafkaformatwithtype)
+    * [`obj spec.kafka.keytab`](#obj-speckafkakeytab)
+      * [`fn withValue(value)`](#fn-speckafkakeytabwithvalue)
+      * [`obj spec.kafka.keytab.mountFrom`](#obj-speckafkakeytabmountfrom)
+        * [`obj spec.kafka.keytab.mountFrom.secretKeyRef`](#obj-speckafkakeytabmountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-speckafkakeytabmountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-speckafkakeytabmountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-speckafkakeytabmountfromsecretkeyrefwithoptional)
+      * [`obj spec.kafka.keytab.valueFrom`](#obj-speckafkakeytabvaluefrom)
+        * [`obj spec.kafka.keytab.valueFrom.secretKeyRef`](#obj-speckafkakeytabvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-speckafkakeytabvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-speckafkakeytabvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-speckafkakeytabvaluefromsecretkeyrefwithoptional)
     * [`obj spec.kafka.password`](#obj-speckafkapassword)
       * [`fn withValue(value)`](#fn-speckafkapasswordwithvalue)
       * [`obj spec.kafka.password.mountFrom`](#obj-speckafkapasswordmountfrom)
@@ -1187,6 +1372,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withRegion(region)`](#fn-speckinesisstreamwithregion)
     * [`fn withReset_backoff_if_success(reset_backoff_if_success)`](#fn-speckinesisstreamwithreset_backoff_if_success)
     * [`fn withRetries_on_batch_request(retries_on_batch_request)`](#fn-speckinesisstreamwithretries_on_batch_request)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-speckinesisstreamwithslow_flush_log_threshold)
     * [`fn withStream_name(stream_name)`](#fn-speckinesisstreamwithstream_name)
     * [`obj spec.kinesisStream.assume_role_credentials`](#obj-speckinesisstreamassume_role_credentials)
       * [`fn withDuration_seconds(duration_seconds)`](#fn-speckinesisstreamassume_role_credentialswithduration_seconds)
@@ -1277,6 +1463,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withIngester_domain(ingester_domain)`](#fn-speclogdnawithingester_domain)
     * [`fn withIngester_endpoint(ingester_endpoint)`](#fn-speclogdnawithingester_endpoint)
     * [`fn withRequest_timeout(request_timeout)`](#fn-speclogdnawithrequest_timeout)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-speclogdnawithslow_flush_log_threshold)
     * [`fn withTags(tags)`](#fn-speclogdnawithtags)
     * [`obj spec.logdna.buffer`](#obj-speclogdnabuffer)
       * [`fn withChunk_full_threshold(chunk_full_threshold)`](#fn-speclogdnabufferwithchunk_full_threshold)
@@ -1313,12 +1500,15 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
       * [`fn withTotal_limit_size(total_limit_size)`](#fn-speclogdnabufferwithtotal_limit_size)
       * [`fn withType(type)`](#fn-speclogdnabufferwithtype)
   * [`obj spec.logz`](#obj-speclogz)
+    * [`fn withBulk_limit(bulk_limit)`](#fn-speclogzwithbulk_limit)
+    * [`fn withBulk_limit_warning_limit(bulk_limit_warning_limit)`](#fn-speclogzwithbulk_limit_warning_limit)
     * [`fn withGzip(gzip)`](#fn-speclogzwithgzip)
     * [`fn withHttp_idle_timeout(http_idle_timeout)`](#fn-speclogzwithhttp_idle_timeout)
     * [`fn withOutput_include_tags(output_include_tags)`](#fn-speclogzwithoutput_include_tags)
     * [`fn withOutput_include_time(output_include_time)`](#fn-speclogzwithoutput_include_time)
     * [`fn withRetry_count(retry_count)`](#fn-speclogzwithretry_count)
     * [`fn withRetry_sleep(retry_sleep)`](#fn-speclogzwithretry_sleep)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-speclogzwithslow_flush_log_threshold)
     * [`obj spec.logz.buffer`](#obj-speclogzbuffer)
       * [`fn withChunk_full_threshold(chunk_full_threshold)`](#fn-speclogzbufferwithchunk_full_threshold)
       * [`fn withChunk_limit_records(chunk_limit_records)`](#fn-speclogzbufferwithchunk_limit_records)
@@ -1380,6 +1570,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withLine_format(line_format)`](#fn-speclokiwithline_format)
     * [`fn withRemove_keys(remove_keys)`](#fn-speclokiwithremove_keys)
     * [`fn withRemove_keysMixin(remove_keys)`](#fn-speclokiwithremove_keysmixin)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-speclokiwithslow_flush_log_threshold)
     * [`fn withTenant(tenant)`](#fn-speclokiwithtenant)
     * [`fn withUrl(url)`](#fn-speclokiwithurl)
     * [`obj spec.loki.buffer`](#obj-speclokibuffer)
@@ -1476,6 +1667,189 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
           * [`fn withKey(key)`](#fn-speclokiusernamevaluefromsecretkeyrefwithkey)
           * [`fn withName(name)`](#fn-speclokiusernamevaluefromsecretkeyrefwithname)
           * [`fn withOptional(optional)`](#fn-speclokiusernamevaluefromsecretkeyrefwithoptional)
+  * [`obj spec.opensearch`](#obj-specopensearch)
+    * [`fn withApplication_name(application_name)`](#fn-specopensearchwithapplication_name)
+    * [`fn withBulk_message_request_threshold(bulk_message_request_threshold)`](#fn-specopensearchwithbulk_message_request_threshold)
+    * [`fn withCatch_transport_exception_on_retry(catch_transport_exception_on_retry)`](#fn-specopensearchwithcatch_transport_exception_on_retry)
+    * [`fn withCompression_level(compression_level)`](#fn-specopensearchwithcompression_level)
+    * [`fn withCustom_headers(custom_headers)`](#fn-specopensearchwithcustom_headers)
+    * [`fn withCustomize_template(customize_template)`](#fn-specopensearchwithcustomize_template)
+    * [`fn withDefault_opensearch_version(default_opensearch_version)`](#fn-specopensearchwithdefault_opensearch_version)
+    * [`fn withEmit_error_for_missing_id(emit_error_for_missing_id)`](#fn-specopensearchwithemit_error_for_missing_id)
+    * [`fn withEmit_error_label_event(emit_error_label_event)`](#fn-specopensearchwithemit_error_label_event)
+    * [`fn withException_backup(exception_backup)`](#fn-specopensearchwithexception_backup)
+    * [`fn withFail_on_detecting_os_version_retry_exceed(fail_on_detecting_os_version_retry_exceed)`](#fn-specopensearchwithfail_on_detecting_os_version_retry_exceed)
+    * [`fn withFail_on_putting_template_retry_exceed(fail_on_putting_template_retry_exceed)`](#fn-specopensearchwithfail_on_putting_template_retry_exceed)
+    * [`fn withFlatten_hashes(flatten_hashes)`](#fn-specopensearchwithflatten_hashes)
+    * [`fn withFlatten_hashes_separator(flatten_hashes_separator)`](#fn-specopensearchwithflatten_hashes_separator)
+    * [`fn withHost(host)`](#fn-specopensearchwithhost)
+    * [`fn withHosts(hosts)`](#fn-specopensearchwithhosts)
+    * [`fn withHttp_backend(http_backend)`](#fn-specopensearchwithhttp_backend)
+    * [`fn withHttp_backend_excon_nonblock(http_backend_excon_nonblock)`](#fn-specopensearchwithhttp_backend_excon_nonblock)
+    * [`fn withId_key(id_key)`](#fn-specopensearchwithid_key)
+    * [`fn withIgnore_exceptions(ignore_exceptions)`](#fn-specopensearchwithignore_exceptions)
+    * [`fn withInclude_index_in_url(include_index_in_url)`](#fn-specopensearchwithinclude_index_in_url)
+    * [`fn withInclude_tag_key(include_tag_key)`](#fn-specopensearchwithinclude_tag_key)
+    * [`fn withInclude_timestamp(include_timestamp)`](#fn-specopensearchwithinclude_timestamp)
+    * [`fn withIndex_date_pattern(index_date_pattern)`](#fn-specopensearchwithindex_date_pattern)
+    * [`fn withIndex_name(index_name)`](#fn-specopensearchwithindex_name)
+    * [`fn withIndex_separator(index_separator)`](#fn-specopensearchwithindex_separator)
+    * [`fn withLog_os_400_reason(log_os_400_reason)`](#fn-specopensearchwithlog_os_400_reason)
+    * [`fn withLogstash_dateformat(logstash_dateformat)`](#fn-specopensearchwithlogstash_dateformat)
+    * [`fn withLogstash_format(logstash_format)`](#fn-specopensearchwithlogstash_format)
+    * [`fn withLogstash_prefix(logstash_prefix)`](#fn-specopensearchwithlogstash_prefix)
+    * [`fn withLogstash_prefix_separator(logstash_prefix_separator)`](#fn-specopensearchwithlogstash_prefix_separator)
+    * [`fn withMax_retry_get_os_version(max_retry_get_os_version)`](#fn-specopensearchwithmax_retry_get_os_version)
+    * [`fn withMax_retry_putting_template(max_retry_putting_template)`](#fn-specopensearchwithmax_retry_putting_template)
+    * [`fn withParent_key(parent_key)`](#fn-specopensearchwithparent_key)
+    * [`fn withPath(path)`](#fn-specopensearchwithpath)
+    * [`fn withPipeline(pipeline)`](#fn-specopensearchwithpipeline)
+    * [`fn withPort(port)`](#fn-specopensearchwithport)
+    * [`fn withPrefer_oj_serializer(prefer_oj_serializer)`](#fn-specopensearchwithprefer_oj_serializer)
+    * [`fn withReconnect_on_error(reconnect_on_error)`](#fn-specopensearchwithreconnect_on_error)
+    * [`fn withReload_after(reload_after)`](#fn-specopensearchwithreload_after)
+    * [`fn withReload_connections(reload_connections)`](#fn-specopensearchwithreload_connections)
+    * [`fn withReload_on_failure(reload_on_failure)`](#fn-specopensearchwithreload_on_failure)
+    * [`fn withRemove_keys_on_update(remove_keys_on_update)`](#fn-specopensearchwithremove_keys_on_update)
+    * [`fn withRemove_keys_on_update_key(remove_keys_on_update_key)`](#fn-specopensearchwithremove_keys_on_update_key)
+    * [`fn withRequest_timeout(request_timeout)`](#fn-specopensearchwithrequest_timeout)
+    * [`fn withResurrect_after(resurrect_after)`](#fn-specopensearchwithresurrect_after)
+    * [`fn withRetry_tag(retry_tag)`](#fn-specopensearchwithretry_tag)
+    * [`fn withRouting_key(routing_key)`](#fn-specopensearchwithrouting_key)
+    * [`fn withScheme(scheme)`](#fn-specopensearchwithscheme)
+    * [`fn withSelector_class_name(selector_class_name)`](#fn-specopensearchwithselector_class_name)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specopensearchwithslow_flush_log_threshold)
+    * [`fn withSniffer_class_name(sniffer_class_name)`](#fn-specopensearchwithsniffer_class_name)
+    * [`fn withSsl_verify(ssl_verify)`](#fn-specopensearchwithssl_verify)
+    * [`fn withSuppress_doc_wrap(suppress_doc_wrap)`](#fn-specopensearchwithsuppress_doc_wrap)
+    * [`fn withSuppress_type_name(suppress_type_name)`](#fn-specopensearchwithsuppress_type_name)
+    * [`fn withTag_key(tag_key)`](#fn-specopensearchwithtag_key)
+    * [`fn withTarget_index_affinity(target_index_affinity)`](#fn-specopensearchwithtarget_index_affinity)
+    * [`fn withTarget_index_key(target_index_key)`](#fn-specopensearchwithtarget_index_key)
+    * [`fn withTemplate_name(template_name)`](#fn-specopensearchwithtemplate_name)
+    * [`fn withTemplate_overwrite(template_overwrite)`](#fn-specopensearchwithtemplate_overwrite)
+    * [`fn withTemplates(templates)`](#fn-specopensearchwithtemplates)
+    * [`fn withTime_key(time_key)`](#fn-specopensearchwithtime_key)
+    * [`fn withTime_key_exclude_timestamp(time_key_exclude_timestamp)`](#fn-specopensearchwithtime_key_exclude_timestamp)
+    * [`fn withTime_key_format(time_key_format)`](#fn-specopensearchwithtime_key_format)
+    * [`fn withTime_parse_error_tag(time_parse_error_tag)`](#fn-specopensearchwithtime_parse_error_tag)
+    * [`fn withTime_precision(time_precision)`](#fn-specopensearchwithtime_precision)
+    * [`fn withTruncate_caches_interval(truncate_caches_interval)`](#fn-specopensearchwithtruncate_caches_interval)
+    * [`fn withUnrecoverable_error_types(unrecoverable_error_types)`](#fn-specopensearchwithunrecoverable_error_types)
+    * [`fn withUnrecoverable_record_types(unrecoverable_record_types)`](#fn-specopensearchwithunrecoverable_record_types)
+    * [`fn withUse_legacy_template(use_legacy_template)`](#fn-specopensearchwithuse_legacy_template)
+    * [`fn withUser(user)`](#fn-specopensearchwithuser)
+    * [`fn withUtc_index(utc_index)`](#fn-specopensearchwithutc_index)
+    * [`fn withValidate_client_version(validate_client_version)`](#fn-specopensearchwithvalidate_client_version)
+    * [`fn withVerify_os_version_at_startup(verify_os_version_at_startup)`](#fn-specopensearchwithverify_os_version_at_startup)
+    * [`fn withWith_transporter_log(with_transporter_log)`](#fn-specopensearchwithwith_transporter_log)
+    * [`fn withWrite_operation(write_operation)`](#fn-specopensearchwithwrite_operation)
+    * [`obj spec.opensearch.buffer`](#obj-specopensearchbuffer)
+      * [`fn withChunk_full_threshold(chunk_full_threshold)`](#fn-specopensearchbufferwithchunk_full_threshold)
+      * [`fn withChunk_limit_records(chunk_limit_records)`](#fn-specopensearchbufferwithchunk_limit_records)
+      * [`fn withChunk_limit_size(chunk_limit_size)`](#fn-specopensearchbufferwithchunk_limit_size)
+      * [`fn withCompress(compress)`](#fn-specopensearchbufferwithcompress)
+      * [`fn withDelayed_commit_timeout(delayed_commit_timeout)`](#fn-specopensearchbufferwithdelayed_commit_timeout)
+      * [`fn withDisable_chunk_backup(disable_chunk_backup)`](#fn-specopensearchbufferwithdisable_chunk_backup)
+      * [`fn withDisabled(disabled)`](#fn-specopensearchbufferwithdisabled)
+      * [`fn withFlush_at_shutdown(flush_at_shutdown)`](#fn-specopensearchbufferwithflush_at_shutdown)
+      * [`fn withFlush_interval(flush_interval)`](#fn-specopensearchbufferwithflush_interval)
+      * [`fn withFlush_mode(flush_mode)`](#fn-specopensearchbufferwithflush_mode)
+      * [`fn withFlush_thread_burst_interval(flush_thread_burst_interval)`](#fn-specopensearchbufferwithflush_thread_burst_interval)
+      * [`fn withFlush_thread_count(flush_thread_count)`](#fn-specopensearchbufferwithflush_thread_count)
+      * [`fn withFlush_thread_interval(flush_thread_interval)`](#fn-specopensearchbufferwithflush_thread_interval)
+      * [`fn withOverflow_action(overflow_action)`](#fn-specopensearchbufferwithoverflow_action)
+      * [`fn withPath(path)`](#fn-specopensearchbufferwithpath)
+      * [`fn withQueue_limit_length(queue_limit_length)`](#fn-specopensearchbufferwithqueue_limit_length)
+      * [`fn withQueued_chunks_limit_size(queued_chunks_limit_size)`](#fn-specopensearchbufferwithqueued_chunks_limit_size)
+      * [`fn withRetry_exponential_backoff_base(retry_exponential_backoff_base)`](#fn-specopensearchbufferwithretry_exponential_backoff_base)
+      * [`fn withRetry_forever(retry_forever)`](#fn-specopensearchbufferwithretry_forever)
+      * [`fn withRetry_max_interval(retry_max_interval)`](#fn-specopensearchbufferwithretry_max_interval)
+      * [`fn withRetry_max_times(retry_max_times)`](#fn-specopensearchbufferwithretry_max_times)
+      * [`fn withRetry_randomize(retry_randomize)`](#fn-specopensearchbufferwithretry_randomize)
+      * [`fn withRetry_secondary_threshold(retry_secondary_threshold)`](#fn-specopensearchbufferwithretry_secondary_threshold)
+      * [`fn withRetry_timeout(retry_timeout)`](#fn-specopensearchbufferwithretry_timeout)
+      * [`fn withRetry_type(retry_type)`](#fn-specopensearchbufferwithretry_type)
+      * [`fn withRetry_wait(retry_wait)`](#fn-specopensearchbufferwithretry_wait)
+      * [`fn withTags(tags)`](#fn-specopensearchbufferwithtags)
+      * [`fn withTimekey(timekey)`](#fn-specopensearchbufferwithtimekey)
+      * [`fn withTimekey_use_utc(timekey_use_utc)`](#fn-specopensearchbufferwithtimekey_use_utc)
+      * [`fn withTimekey_wait(timekey_wait)`](#fn-specopensearchbufferwithtimekey_wait)
+      * [`fn withTimekey_zone(timekey_zone)`](#fn-specopensearchbufferwithtimekey_zone)
+      * [`fn withTotal_limit_size(total_limit_size)`](#fn-specopensearchbufferwithtotal_limit_size)
+      * [`fn withType(type)`](#fn-specopensearchbufferwithtype)
+    * [`obj spec.opensearch.ca_file`](#obj-specopensearchca_file)
+      * [`fn withValue(value)`](#fn-specopensearchca_filewithvalue)
+      * [`obj spec.opensearch.ca_file.mountFrom`](#obj-specopensearchca_filemountfrom)
+        * [`obj spec.opensearch.ca_file.mountFrom.secretKeyRef`](#obj-specopensearchca_filemountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchca_filemountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchca_filemountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchca_filemountfromsecretkeyrefwithoptional)
+      * [`obj spec.opensearch.ca_file.valueFrom`](#obj-specopensearchca_filevaluefrom)
+        * [`obj spec.opensearch.ca_file.valueFrom.secretKeyRef`](#obj-specopensearchca_filevaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchca_filevaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchca_filevaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchca_filevaluefromsecretkeyrefwithoptional)
+    * [`obj spec.opensearch.client_cert`](#obj-specopensearchclient_cert)
+      * [`fn withValue(value)`](#fn-specopensearchclient_certwithvalue)
+      * [`obj spec.opensearch.client_cert.mountFrom`](#obj-specopensearchclient_certmountfrom)
+        * [`obj spec.opensearch.client_cert.mountFrom.secretKeyRef`](#obj-specopensearchclient_certmountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchclient_certmountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchclient_certmountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchclient_certmountfromsecretkeyrefwithoptional)
+      * [`obj spec.opensearch.client_cert.valueFrom`](#obj-specopensearchclient_certvaluefrom)
+        * [`obj spec.opensearch.client_cert.valueFrom.secretKeyRef`](#obj-specopensearchclient_certvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchclient_certvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchclient_certvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchclient_certvaluefromsecretkeyrefwithoptional)
+    * [`obj spec.opensearch.client_key`](#obj-specopensearchclient_key)
+      * [`fn withValue(value)`](#fn-specopensearchclient_keywithvalue)
+      * [`obj spec.opensearch.client_key.mountFrom`](#obj-specopensearchclient_keymountfrom)
+        * [`obj spec.opensearch.client_key.mountFrom.secretKeyRef`](#obj-specopensearchclient_keymountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchclient_keymountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchclient_keymountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchclient_keymountfromsecretkeyrefwithoptional)
+      * [`obj spec.opensearch.client_key.valueFrom`](#obj-specopensearchclient_keyvaluefrom)
+        * [`obj spec.opensearch.client_key.valueFrom.secretKeyRef`](#obj-specopensearchclient_keyvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchclient_keyvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchclient_keyvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchclient_keyvaluefromsecretkeyrefwithoptional)
+    * [`obj spec.opensearch.client_key_pass`](#obj-specopensearchclient_key_pass)
+      * [`fn withValue(value)`](#fn-specopensearchclient_key_passwithvalue)
+      * [`obj spec.opensearch.client_key_pass.mountFrom`](#obj-specopensearchclient_key_passmountfrom)
+        * [`obj spec.opensearch.client_key_pass.mountFrom.secretKeyRef`](#obj-specopensearchclient_key_passmountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchclient_key_passmountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchclient_key_passmountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchclient_key_passmountfromsecretkeyrefwithoptional)
+      * [`obj spec.opensearch.client_key_pass.valueFrom`](#obj-specopensearchclient_key_passvaluefrom)
+        * [`obj spec.opensearch.client_key_pass.valueFrom.secretKeyRef`](#obj-specopensearchclient_key_passvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchclient_key_passvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchclient_key_passvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchclient_key_passvaluefromsecretkeyrefwithoptional)
+    * [`obj spec.opensearch.password`](#obj-specopensearchpassword)
+      * [`fn withValue(value)`](#fn-specopensearchpasswordwithvalue)
+      * [`obj spec.opensearch.password.mountFrom`](#obj-specopensearchpasswordmountfrom)
+        * [`obj spec.opensearch.password.mountFrom.secretKeyRef`](#obj-specopensearchpasswordmountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchpasswordmountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchpasswordmountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchpasswordmountfromsecretkeyrefwithoptional)
+      * [`obj spec.opensearch.password.valueFrom`](#obj-specopensearchpasswordvaluefrom)
+        * [`obj spec.opensearch.password.valueFrom.secretKeyRef`](#obj-specopensearchpasswordvaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchpasswordvaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchpasswordvaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchpasswordvaluefromsecretkeyrefwithoptional)
+    * [`obj spec.opensearch.template_file`](#obj-specopensearchtemplate_file)
+      * [`fn withValue(value)`](#fn-specopensearchtemplate_filewithvalue)
+      * [`obj spec.opensearch.template_file.mountFrom`](#obj-specopensearchtemplate_filemountfrom)
+        * [`obj spec.opensearch.template_file.mountFrom.secretKeyRef`](#obj-specopensearchtemplate_filemountfromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchtemplate_filemountfromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchtemplate_filemountfromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchtemplate_filemountfromsecretkeyrefwithoptional)
+      * [`obj spec.opensearch.template_file.valueFrom`](#obj-specopensearchtemplate_filevaluefrom)
+        * [`obj spec.opensearch.template_file.valueFrom.secretKeyRef`](#obj-specopensearchtemplate_filevaluefromsecretkeyref)
+          * [`fn withKey(key)`](#fn-specopensearchtemplate_filevaluefromsecretkeyrefwithkey)
+          * [`fn withName(name)`](#fn-specopensearchtemplate_filevaluefromsecretkeyrefwithname)
+          * [`fn withOptional(optional)`](#fn-specopensearchtemplate_filevaluefromsecretkeyrefwithoptional)
   * [`obj spec.oss`](#obj-specoss)
     * [`fn withAuto_create_bucket(auto_create_bucket)`](#fn-specosswithauto_create_bucket)
     * [`fn withBucket(bucket)`](#fn-specosswithbucket)
@@ -1491,6 +1865,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withOverwrite(overwrite)`](#fn-specosswithoverwrite)
     * [`fn withPath(path)`](#fn-specosswithpath)
     * [`fn withRead_timeout(read_timeout)`](#fn-specosswithread_timeout)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specosswithslow_flush_log_threshold)
     * [`fn withStore_as(store_as)`](#fn-specosswithstore_as)
     * [`fn withUpload_crc_enable(upload_crc_enable)`](#fn-specosswithupload_crc_enable)
     * [`fn withWarn_for_delay(warn_for_delay)`](#fn-specosswithwarn_for_delay)
@@ -1562,6 +1937,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withHost(host)`](#fn-specrediswithhost)
     * [`fn withInsert_key_prefix(insert_key_prefix)`](#fn-specrediswithinsert_key_prefix)
     * [`fn withPort(port)`](#fn-specrediswithport)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specrediswithslow_flush_log_threshold)
     * [`fn withStrftime_format(strftime_format)`](#fn-specrediswithstrftime_format)
     * [`fn withTtl(ttl)`](#fn-specrediswithttl)
     * [`obj spec.redis.buffer`](#obj-specredisbuffer)
@@ -1641,6 +2017,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withS3_object_key_format(s3_object_key_format)`](#fn-specs3withs3_object_key_format)
     * [`fn withS3_region(s3_region)`](#fn-specs3withs3_region)
     * [`fn withSignature_version(signature_version)`](#fn-specs3withsignature_version)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specs3withslow_flush_log_threshold)
     * [`fn withSse_customer_algorithm(sse_customer_algorithm)`](#fn-specs3withsse_customer_algorithm)
     * [`fn withSse_customer_key(sse_customer_key)`](#fn-specs3withsse_customer_key)
     * [`fn withSse_customer_key_md5(sse_customer_key_md5)`](#fn-specs3withsse_customer_key_md5)
@@ -1756,6 +2133,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withOpen_timeout(open_timeout)`](#fn-specsplunkhecwithopen_timeout)
     * [`fn withProtocol(protocol)`](#fn-specsplunkhecwithprotocol)
     * [`fn withRead_timeout(read_timeout)`](#fn-specsplunkhecwithread_timeout)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specsplunkhecwithslow_flush_log_threshold)
     * [`fn withSource(source)`](#fn-specsplunkhecwithsource)
     * [`fn withSource_key(source_key)`](#fn-specsplunkhecwithsource_key)
     * [`fn withSourcetype(sourcetype)`](#fn-specsplunkhecwithsourcetype)
@@ -1866,6 +2244,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withMessage_group_id(message_group_id)`](#fn-specsqswithmessage_group_id)
     * [`fn withQueue_name(queue_name)`](#fn-specsqswithqueue_name)
     * [`fn withRegion(region)`](#fn-specsqswithregion)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specsqswithslow_flush_log_threshold)
     * [`fn withSqs_url(sqs_url)`](#fn-specsqswithsqs_url)
     * [`fn withTag_property_name(tag_property_name)`](#fn-specsqswithtag_property_name)
     * [`obj spec.sqs.aws_key_id`](#obj-specsqsaws_key_id)
@@ -1941,6 +2320,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withMetric_data_format(metric_data_format)`](#fn-specsumologicwithmetric_data_format)
     * [`fn withOpen_timeout(open_timeout)`](#fn-specsumologicwithopen_timeout)
     * [`fn withProxy_uri(proxy_uri)`](#fn-specsumologicwithproxy_uri)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specsumologicwithslow_flush_log_threshold)
     * [`fn withSource_category(source_category)`](#fn-specsumologicwithsource_category)
     * [`fn withSource_host(source_host)`](#fn-specsumologicwithsource_host)
     * [`fn withSource_name(source_name)`](#fn-specsumologicwithsource_name)
@@ -2001,6 +2381,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
     * [`fn withHost(host)`](#fn-specsyslogwithhost)
     * [`fn withInsecure(insecure)`](#fn-specsyslogwithinsecure)
     * [`fn withPort(port)`](#fn-specsyslogwithport)
+    * [`fn withSlow_flush_log_threshold(slow_flush_log_threshold)`](#fn-specsyslogwithslow_flush_log_threshold)
     * [`fn withTransport(transport)`](#fn-specsyslogwithtransport)
     * [`fn withVerify_fqdn(verify_fqdn)`](#fn-specsyslogwithverify_fqdn)
     * [`fn withVersion(version)`](#fn-specsyslogwithversion)
@@ -2104,7 +2485,7 @@ permalink: /3.17.3/logging/v1beta1/clusterOutput/
 new(name)
 ```
 
-new returns an instance of ClusterOutput
+new returns an instance of Output
 
 ## obj metadata
 
@@ -2438,24 +2819,6 @@ withOptional(optional)
 
 
 
-### fn spec.withEnabledNamespaces
-
-```ts
-withEnabledNamespaces(enabledNamespaces)
-```
-
-
-
-### fn spec.withEnabledNamespacesMixin
-
-```ts
-withEnabledNamespacesMixin(enabledNamespaces)
-```
-
-
-
-**Note:** This function appends passed data to existing values
-
 ### fn spec.withLoggingRef
 
 ```ts
@@ -2486,10 +2849,234 @@ withNulloutMixin(nullout)
 
 
 
+### fn spec.awsElasticsearch.withApplication_name
+
+```ts
+withApplication_name(application_name)
+```
+
+
+
+### fn spec.awsElasticsearch.withBulk_message_request_threshold
+
+```ts
+withBulk_message_request_threshold(bulk_message_request_threshold)
+```
+
+
+
+### fn spec.awsElasticsearch.withContent_type
+
+```ts
+withContent_type(content_type)
+```
+
+
+
+### fn spec.awsElasticsearch.withCustom_headers
+
+```ts
+withCustom_headers(custom_headers)
+```
+
+
+
+### fn spec.awsElasticsearch.withCustomize_template
+
+```ts
+withCustomize_template(customize_template)
+```
+
+
+
+### fn spec.awsElasticsearch.withData_stream_enable
+
+```ts
+withData_stream_enable(data_stream_enable)
+```
+
+
+
+### fn spec.awsElasticsearch.withData_stream_ilm_name
+
+```ts
+withData_stream_ilm_name(data_stream_ilm_name)
+```
+
+
+
+### fn spec.awsElasticsearch.withData_stream_ilm_policy
+
+```ts
+withData_stream_ilm_policy(data_stream_ilm_policy)
+```
+
+
+
+### fn spec.awsElasticsearch.withData_stream_ilm_policy_overwrite
+
+```ts
+withData_stream_ilm_policy_overwrite(data_stream_ilm_policy_overwrite)
+```
+
+
+
+### fn spec.awsElasticsearch.withData_stream_name
+
+```ts
+withData_stream_name(data_stream_name)
+```
+
+
+
+### fn spec.awsElasticsearch.withData_stream_template_name
+
+```ts
+withData_stream_template_name(data_stream_template_name)
+```
+
+
+
+### fn spec.awsElasticsearch.withDefault_elasticsearch_version
+
+```ts
+withDefault_elasticsearch_version(default_elasticsearch_version)
+```
+
+
+
+### fn spec.awsElasticsearch.withDeflector_alias
+
+```ts
+withDeflector_alias(deflector_alias)
+```
+
+
+
+### fn spec.awsElasticsearch.withEnable_ilm
+
+```ts
+withEnable_ilm(enable_ilm)
+```
+
+
+
+### fn spec.awsElasticsearch.withException_backup
+
+```ts
+withException_backup(exception_backup)
+```
+
+
+
+### fn spec.awsElasticsearch.withFail_on_detecting_es_version_retry_exceed
+
+```ts
+withFail_on_detecting_es_version_retry_exceed(fail_on_detecting_es_version_retry_exceed)
+```
+
+
+
+### fn spec.awsElasticsearch.withFail_on_putting_template_retry_exceed
+
+```ts
+withFail_on_putting_template_retry_exceed(fail_on_putting_template_retry_exceed)
+```
+
+
+
+### fn spec.awsElasticsearch.withFlatten_hashes
+
+```ts
+withFlatten_hashes(flatten_hashes)
+```
+
+
+
+### fn spec.awsElasticsearch.withFlatten_hashes_separator
+
+```ts
+withFlatten_hashes_separator(flatten_hashes_separator)
+```
+
+
+
 ### fn spec.awsElasticsearch.withFlush_interval
 
 ```ts
 withFlush_interval(flush_interval)
+```
+
+
+
+### fn spec.awsElasticsearch.withHost
+
+```ts
+withHost(host)
+```
+
+
+
+### fn spec.awsElasticsearch.withHosts
+
+```ts
+withHosts(hosts)
+```
+
+
+
+### fn spec.awsElasticsearch.withHttp_backend
+
+```ts
+withHttp_backend(http_backend)
+```
+
+
+
+### fn spec.awsElasticsearch.withId_key
+
+```ts
+withId_key(id_key)
+```
+
+
+
+### fn spec.awsElasticsearch.withIgnore_exceptions
+
+```ts
+withIgnore_exceptions(ignore_exceptions)
+```
+
+
+
+### fn spec.awsElasticsearch.withIlm_policy
+
+```ts
+withIlm_policy(ilm_policy)
+```
+
+
+
+### fn spec.awsElasticsearch.withIlm_policy_id
+
+```ts
+withIlm_policy_id(ilm_policy_id)
+```
+
+
+
+### fn spec.awsElasticsearch.withIlm_policy_overwrite
+
+```ts
+withIlm_policy_overwrite(ilm_policy_overwrite)
+```
+
+
+
+### fn spec.awsElasticsearch.withInclude_index_in_url
+
+```ts
+withInclude_index_in_url(include_index_in_url)
 ```
 
 
@@ -2510,10 +3097,42 @@ withInclude_timestamp(include_timestamp)
 
 
 
+### fn spec.awsElasticsearch.withIndex_date_pattern
+
+```ts
+withIndex_date_pattern(index_date_pattern)
+```
+
+
+
 ### fn spec.awsElasticsearch.withIndex_name
 
 ```ts
 withIndex_name(index_name)
+```
+
+
+
+### fn spec.awsElasticsearch.withIndex_prefix
+
+```ts
+withIndex_prefix(index_prefix)
+```
+
+
+
+### fn spec.awsElasticsearch.withLog_es_400_reason
+
+```ts
+withLog_es_400_reason(log_es_400_reason)
+```
+
+
+
+### fn spec.awsElasticsearch.withLogstash_dateformat
+
+```ts
+withLogstash_dateformat(logstash_dateformat)
 ```
 
 
@@ -2534,10 +3153,446 @@ withLogstash_prefix(logstash_prefix)
 
 
 
+### fn spec.awsElasticsearch.withLogstash_prefix_separator
+
+```ts
+withLogstash_prefix_separator(logstash_prefix_separator)
+```
+
+
+
+### fn spec.awsElasticsearch.withMax_retry_get_es_version
+
+```ts
+withMax_retry_get_es_version(max_retry_get_es_version)
+```
+
+
+
+### fn spec.awsElasticsearch.withMax_retry_putting_template
+
+```ts
+withMax_retry_putting_template(max_retry_putting_template)
+```
+
+
+
+### fn spec.awsElasticsearch.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.awsElasticsearch.withPipeline
+
+```ts
+withPipeline(pipeline)
+```
+
+
+
+### fn spec.awsElasticsearch.withPort
+
+```ts
+withPort(port)
+```
+
+
+
+### fn spec.awsElasticsearch.withPrefer_oj_serializer
+
+```ts
+withPrefer_oj_serializer(prefer_oj_serializer)
+```
+
+
+
+### fn spec.awsElasticsearch.withReconnect_on_error
+
+```ts
+withReconnect_on_error(reconnect_on_error)
+```
+
+
+
+### fn spec.awsElasticsearch.withReload_after
+
+```ts
+withReload_after(reload_after)
+```
+
+
+
+### fn spec.awsElasticsearch.withReload_connections
+
+```ts
+withReload_connections(reload_connections)
+```
+
+
+
+### fn spec.awsElasticsearch.withReload_on_failure
+
+```ts
+withReload_on_failure(reload_on_failure)
+```
+
+
+
+### fn spec.awsElasticsearch.withRemove_keys
+
+```ts
+withRemove_keys(remove_keys)
+```
+
+
+
+### fn spec.awsElasticsearch.withRemove_keys_on_update
+
+```ts
+withRemove_keys_on_update(remove_keys_on_update)
+```
+
+
+
+### fn spec.awsElasticsearch.withRemove_keys_on_update_key
+
+```ts
+withRemove_keys_on_update_key(remove_keys_on_update_key)
+```
+
+
+
+### fn spec.awsElasticsearch.withRequest_timeout
+
+```ts
+withRequest_timeout(request_timeout)
+```
+
+
+
+### fn spec.awsElasticsearch.withResurrect_after
+
+```ts
+withResurrect_after(resurrect_after)
+```
+
+
+
+### fn spec.awsElasticsearch.withRetry_tag
+
+```ts
+withRetry_tag(retry_tag)
+```
+
+
+
+### fn spec.awsElasticsearch.withRollover_index
+
+```ts
+withRollover_index(rollover_index)
+```
+
+
+
+### fn spec.awsElasticsearch.withRouting_key
+
+```ts
+withRouting_key(routing_key)
+```
+
+
+
+### fn spec.awsElasticsearch.withScheme
+
+```ts
+withScheme(scheme)
+```
+
+
+
+### fn spec.awsElasticsearch.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
+### fn spec.awsElasticsearch.withSniffer_class_name
+
+```ts
+withSniffer_class_name(sniffer_class_name)
+```
+
+
+
+### fn spec.awsElasticsearch.withSsl_max_version
+
+```ts
+withSsl_max_version(ssl_max_version)
+```
+
+
+
+### fn spec.awsElasticsearch.withSsl_min_version
+
+```ts
+withSsl_min_version(ssl_min_version)
+```
+
+
+
+### fn spec.awsElasticsearch.withSsl_verify
+
+```ts
+withSsl_verify(ssl_verify)
+```
+
+
+
+### fn spec.awsElasticsearch.withSsl_version
+
+```ts
+withSsl_version(ssl_version)
+```
+
+
+
+### fn spec.awsElasticsearch.withSuppress_doc_wrap
+
+```ts
+withSuppress_doc_wrap(suppress_doc_wrap)
+```
+
+
+
+### fn spec.awsElasticsearch.withSuppress_type_name
+
+```ts
+withSuppress_type_name(suppress_type_name)
+```
+
+
+
 ### fn spec.awsElasticsearch.withTag_key
 
 ```ts
 withTag_key(tag_key)
+```
+
+
+
+### fn spec.awsElasticsearch.withTarget_index_key
+
+```ts
+withTarget_index_key(target_index_key)
+```
+
+
+
+### fn spec.awsElasticsearch.withTarget_type_key
+
+```ts
+withTarget_type_key(target_type_key)
+```
+
+
+
+### fn spec.awsElasticsearch.withTemplate_name
+
+```ts
+withTemplate_name(template_name)
+```
+
+
+
+### fn spec.awsElasticsearch.withTemplate_overwrite
+
+```ts
+withTemplate_overwrite(template_overwrite)
+```
+
+
+
+### fn spec.awsElasticsearch.withTemplates
+
+```ts
+withTemplates(templates)
+```
+
+
+
+### fn spec.awsElasticsearch.withTime_key
+
+```ts
+withTime_key(time_key)
+```
+
+
+
+### fn spec.awsElasticsearch.withTime_key_format
+
+```ts
+withTime_key_format(time_key_format)
+```
+
+
+
+### fn spec.awsElasticsearch.withTime_parse_error_tag
+
+```ts
+withTime_parse_error_tag(time_parse_error_tag)
+```
+
+
+
+### fn spec.awsElasticsearch.withTime_precision
+
+```ts
+withTime_precision(time_precision)
+```
+
+
+
+### fn spec.awsElasticsearch.withType_name
+
+```ts
+withType_name(type_name)
+```
+
+
+
+### fn spec.awsElasticsearch.withUnrecoverable_error_types
+
+```ts
+withUnrecoverable_error_types(unrecoverable_error_types)
+```
+
+
+
+### fn spec.awsElasticsearch.withUser
+
+```ts
+withUser(user)
+```
+
+
+
+### fn spec.awsElasticsearch.withUtc_index
+
+```ts
+withUtc_index(utc_index)
+```
+
+
+
+### fn spec.awsElasticsearch.withValidate_client_version
+
+```ts
+withValidate_client_version(validate_client_version)
+```
+
+
+
+### fn spec.awsElasticsearch.withVerify_es_version_at_startup
+
+```ts
+withVerify_es_version_at_startup(verify_es_version_at_startup)
+```
+
+
+
+### fn spec.awsElasticsearch.withWith_transporter_log
+
+```ts
+withWith_transporter_log(with_transporter_log)
+```
+
+
+
+### fn spec.awsElasticsearch.withWrite_operation
+
+```ts
+withWrite_operation(write_operation)
+```
+
+
+
+## obj spec.awsElasticsearch.api_key
+
+
+
+### fn spec.awsElasticsearch.api_key.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.awsElasticsearch.api_key.mountFrom
+
+
+
+## obj spec.awsElasticsearch.api_key.mountFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.api_key.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.api_key.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.api_key.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.api_key.valueFrom
+
+
+
+## obj spec.awsElasticsearch.api_key.valueFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.api_key.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.api_key.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.api_key.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
 ```
 
 
@@ -2806,6 +3861,310 @@ withTotal_limit_size(total_limit_size)
 
 ```ts
 withType(type)
+```
+
+
+
+## obj spec.awsElasticsearch.ca_file
+
+
+
+### fn spec.awsElasticsearch.ca_file.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.awsElasticsearch.ca_file.mountFrom
+
+
+
+## obj spec.awsElasticsearch.ca_file.mountFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.ca_file.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.ca_file.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.ca_file.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.ca_file.valueFrom
+
+
+
+## obj spec.awsElasticsearch.ca_file.valueFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.ca_file.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.ca_file.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.ca_file.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.client_cert
+
+
+
+### fn spec.awsElasticsearch.client_cert.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.awsElasticsearch.client_cert.mountFrom
+
+
+
+## obj spec.awsElasticsearch.client_cert.mountFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.client_cert.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.client_cert.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.client_cert.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.client_cert.valueFrom
+
+
+
+## obj spec.awsElasticsearch.client_cert.valueFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.client_cert.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.client_cert.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.client_cert.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.client_key
+
+
+
+### fn spec.awsElasticsearch.client_key.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.awsElasticsearch.client_key.mountFrom
+
+
+
+## obj spec.awsElasticsearch.client_key.mountFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.client_key.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.client_key.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.client_key.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.client_key.valueFrom
+
+
+
+## obj spec.awsElasticsearch.client_key.valueFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.client_key.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.client_key.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.client_key.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.client_key_pass
+
+
+
+### fn spec.awsElasticsearch.client_key_pass.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.awsElasticsearch.client_key_pass.mountFrom
+
+
+
+## obj spec.awsElasticsearch.client_key_pass.mountFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.client_key_pass.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.client_key_pass.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.client_key_pass.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.client_key_pass.valueFrom
+
+
+
+## obj spec.awsElasticsearch.client_key_pass.valueFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.client_key_pass.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.client_key_pass.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.client_key_pass.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
 ```
 
 
@@ -3390,6 +4749,158 @@ withType(type)
 
 
 
+## obj spec.awsElasticsearch.password
+
+
+
+### fn spec.awsElasticsearch.password.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.awsElasticsearch.password.mountFrom
+
+
+
+## obj spec.awsElasticsearch.password.mountFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.password.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.password.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.password.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.password.valueFrom
+
+
+
+## obj spec.awsElasticsearch.password.valueFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.password.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.password.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.password.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.template_file
+
+
+
+### fn spec.awsElasticsearch.template_file.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.awsElasticsearch.template_file.mountFrom
+
+
+
+## obj spec.awsElasticsearch.template_file.mountFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.template_file.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.template_file.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.template_file.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.awsElasticsearch.template_file.valueFrom
+
+
+
+## obj spec.awsElasticsearch.template_file.valueFrom.secretKeyRef
+
+
+
+### fn spec.awsElasticsearch.template_file.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.awsElasticsearch.template_file.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.awsElasticsearch.template_file.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
 ## obj spec.azurestorage
 
 
@@ -3438,6 +4949,14 @@ withFormat(format)
 
 ```ts
 withPath(path)
+```
+
+
+
+### fn spec.azurestorage.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
 ```
 
 
@@ -4190,6 +5709,14 @@ withRetention_in_days_key(retention_in_days_key)
 
 
 
+### fn spec.cloudwatch.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
 ### fn spec.cloudwatch.withUse_tag_as_group
 
 ```ts
@@ -4754,6 +6281,14 @@ withService(service)
 
 
 
+### fn spec.datadog.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
 ### fn spec.datadog.withSsl_port
 
 ```ts
@@ -5214,6 +6749,22 @@ withData_stream_ilm_name(data_stream_ilm_name)
 
 
 
+### fn spec.elasticsearch.withData_stream_ilm_policy
+
+```ts
+withData_stream_ilm_policy(data_stream_ilm_policy)
+```
+
+
+
+### fn spec.elasticsearch.withData_stream_ilm_policy_overwrite
+
+```ts
+withData_stream_ilm_policy_overwrite(data_stream_ilm_policy_overwrite)
+```
+
+
+
 ### fn spec.elasticsearch.withData_stream_name
 
 ```ts
@@ -5258,6 +6809,14 @@ withEnable_ilm(enable_ilm)
 
 ```ts
 withException_backup(exception_backup)
+```
+
+
+
+### fn spec.elasticsearch.withFail_on_detecting_es_version_retry_exceed
+
+```ts
+withFail_on_detecting_es_version_retry_exceed(fail_on_detecting_es_version_retry_exceed)
 ```
 
 
@@ -5518,6 +7077,14 @@ withReload_on_failure(reload_on_failure)
 
 
 
+### fn spec.elasticsearch.withRemove_keys
+
+```ts
+withRemove_keys(remove_keys)
+```
+
+
+
 ### fn spec.elasticsearch.withRemove_keys_on_update
 
 ```ts
@@ -5578,6 +7145,14 @@ withRouting_key(routing_key)
 
 ```ts
 withScheme(scheme)
+```
+
+
+
+### fn spec.elasticsearch.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
 ```
 
 
@@ -6634,6 +8209,14 @@ withRecompress(recompress)
 
 
 
+### fn spec.file.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
 ### fn spec.file.withSymlink_path
 
 ```ts
@@ -7079,6 +8662,14 @@ withServersMixin(servers)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.forward.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
 
 ### fn spec.forward.withTls_allow_self_signed_cert
 
@@ -8158,6 +9749,14 @@ withProject(project)
 
 
 
+### fn spec.gcs.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
 ### fn spec.gcs.withStorage_class
 
 ```ts
@@ -8731,6 +10330,14 @@ withRetryable_response_codesMixin(retryable_response_codes)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.http.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
 
 ### fn spec.http.withSsl_timeout
 
@@ -9704,6 +11311,14 @@ withPartition_key_key(partition_key_key)
 
 
 
+### fn spec.kafka.withPrincipal
+
+```ts
+withPrincipal(principal)
+```
+
+
+
 ### fn spec.kafka.withRequired_acks
 
 ```ts
@@ -9724,6 +11339,14 @@ withSasl_over_ssl(sasl_over_ssl)
 
 ```ts
 withScram_mechanism(scram_mechanism)
+```
+
+
+
+### fn spec.kafka.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
 ```
 
 
@@ -10052,6 +11675,82 @@ withMessage_key(message_key)
 
 ```ts
 withType(type)
+```
+
+
+
+## obj spec.kafka.keytab
+
+
+
+### fn spec.kafka.keytab.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.kafka.keytab.mountFrom
+
+
+
+## obj spec.kafka.keytab.mountFrom.secretKeyRef
+
+
+
+### fn spec.kafka.keytab.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.kafka.keytab.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.kafka.keytab.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.kafka.keytab.valueFrom
+
+
+
+## obj spec.kafka.keytab.valueFrom.secretKeyRef
+
+
+
+### fn spec.kafka.keytab.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.kafka.keytab.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.kafka.keytab.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
 ```
 
 
@@ -10568,6 +12267,14 @@ withReset_backoff_if_success(reset_backoff_if_success)
 
 ```ts
 withRetries_on_batch_request(retries_on_batch_request)
+```
+
+
+
+### fn spec.kinesisStream.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
 ```
 
 
@@ -11212,6 +12919,14 @@ withRequest_timeout(request_timeout)
 
 
 
+### fn spec.logdna.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
 ### fn spec.logdna.withTags
 
 ```ts
@@ -11492,6 +13207,22 @@ withType(type)
 
 
 
+### fn spec.logz.withBulk_limit
+
+```ts
+withBulk_limit(bulk_limit)
+```
+
+
+
+### fn spec.logz.withBulk_limit_warning_limit
+
+```ts
+withBulk_limit_warning_limit(bulk_limit_warning_limit)
+```
+
+
+
 ### fn spec.logz.withGzip
 
 ```ts
@@ -11536,6 +13267,14 @@ withRetry_count(retry_count)
 
 ```ts
 withRetry_sleep(retry_sleep)
+```
+
+
+
+### fn spec.logz.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
 ```
 
 
@@ -12001,6 +13740,14 @@ withRemove_keysMixin(remove_keys)
 
 
 **Note:** This function appends passed data to existing values
+
+### fn spec.loki.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
 
 ### fn spec.loki.withTenant
 
@@ -12666,6 +14413,1342 @@ withOptional(optional)
 
 
 
+## obj spec.opensearch
+
+
+
+### fn spec.opensearch.withApplication_name
+
+```ts
+withApplication_name(application_name)
+```
+
+
+
+### fn spec.opensearch.withBulk_message_request_threshold
+
+```ts
+withBulk_message_request_threshold(bulk_message_request_threshold)
+```
+
+
+
+### fn spec.opensearch.withCatch_transport_exception_on_retry
+
+```ts
+withCatch_transport_exception_on_retry(catch_transport_exception_on_retry)
+```
+
+
+
+### fn spec.opensearch.withCompression_level
+
+```ts
+withCompression_level(compression_level)
+```
+
+
+
+### fn spec.opensearch.withCustom_headers
+
+```ts
+withCustom_headers(custom_headers)
+```
+
+
+
+### fn spec.opensearch.withCustomize_template
+
+```ts
+withCustomize_template(customize_template)
+```
+
+
+
+### fn spec.opensearch.withDefault_opensearch_version
+
+```ts
+withDefault_opensearch_version(default_opensearch_version)
+```
+
+
+
+### fn spec.opensearch.withEmit_error_for_missing_id
+
+```ts
+withEmit_error_for_missing_id(emit_error_for_missing_id)
+```
+
+
+
+### fn spec.opensearch.withEmit_error_label_event
+
+```ts
+withEmit_error_label_event(emit_error_label_event)
+```
+
+
+
+### fn spec.opensearch.withException_backup
+
+```ts
+withException_backup(exception_backup)
+```
+
+
+
+### fn spec.opensearch.withFail_on_detecting_os_version_retry_exceed
+
+```ts
+withFail_on_detecting_os_version_retry_exceed(fail_on_detecting_os_version_retry_exceed)
+```
+
+
+
+### fn spec.opensearch.withFail_on_putting_template_retry_exceed
+
+```ts
+withFail_on_putting_template_retry_exceed(fail_on_putting_template_retry_exceed)
+```
+
+
+
+### fn spec.opensearch.withFlatten_hashes
+
+```ts
+withFlatten_hashes(flatten_hashes)
+```
+
+
+
+### fn spec.opensearch.withFlatten_hashes_separator
+
+```ts
+withFlatten_hashes_separator(flatten_hashes_separator)
+```
+
+
+
+### fn spec.opensearch.withHost
+
+```ts
+withHost(host)
+```
+
+
+
+### fn spec.opensearch.withHosts
+
+```ts
+withHosts(hosts)
+```
+
+
+
+### fn spec.opensearch.withHttp_backend
+
+```ts
+withHttp_backend(http_backend)
+```
+
+
+
+### fn spec.opensearch.withHttp_backend_excon_nonblock
+
+```ts
+withHttp_backend_excon_nonblock(http_backend_excon_nonblock)
+```
+
+
+
+### fn spec.opensearch.withId_key
+
+```ts
+withId_key(id_key)
+```
+
+
+
+### fn spec.opensearch.withIgnore_exceptions
+
+```ts
+withIgnore_exceptions(ignore_exceptions)
+```
+
+
+
+### fn spec.opensearch.withInclude_index_in_url
+
+```ts
+withInclude_index_in_url(include_index_in_url)
+```
+
+
+
+### fn spec.opensearch.withInclude_tag_key
+
+```ts
+withInclude_tag_key(include_tag_key)
+```
+
+
+
+### fn spec.opensearch.withInclude_timestamp
+
+```ts
+withInclude_timestamp(include_timestamp)
+```
+
+
+
+### fn spec.opensearch.withIndex_date_pattern
+
+```ts
+withIndex_date_pattern(index_date_pattern)
+```
+
+
+
+### fn spec.opensearch.withIndex_name
+
+```ts
+withIndex_name(index_name)
+```
+
+
+
+### fn spec.opensearch.withIndex_separator
+
+```ts
+withIndex_separator(index_separator)
+```
+
+
+
+### fn spec.opensearch.withLog_os_400_reason
+
+```ts
+withLog_os_400_reason(log_os_400_reason)
+```
+
+
+
+### fn spec.opensearch.withLogstash_dateformat
+
+```ts
+withLogstash_dateformat(logstash_dateformat)
+```
+
+
+
+### fn spec.opensearch.withLogstash_format
+
+```ts
+withLogstash_format(logstash_format)
+```
+
+
+
+### fn spec.opensearch.withLogstash_prefix
+
+```ts
+withLogstash_prefix(logstash_prefix)
+```
+
+
+
+### fn spec.opensearch.withLogstash_prefix_separator
+
+```ts
+withLogstash_prefix_separator(logstash_prefix_separator)
+```
+
+
+
+### fn spec.opensearch.withMax_retry_get_os_version
+
+```ts
+withMax_retry_get_os_version(max_retry_get_os_version)
+```
+
+
+
+### fn spec.opensearch.withMax_retry_putting_template
+
+```ts
+withMax_retry_putting_template(max_retry_putting_template)
+```
+
+
+
+### fn spec.opensearch.withParent_key
+
+```ts
+withParent_key(parent_key)
+```
+
+
+
+### fn spec.opensearch.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.opensearch.withPipeline
+
+```ts
+withPipeline(pipeline)
+```
+
+
+
+### fn spec.opensearch.withPort
+
+```ts
+withPort(port)
+```
+
+
+
+### fn spec.opensearch.withPrefer_oj_serializer
+
+```ts
+withPrefer_oj_serializer(prefer_oj_serializer)
+```
+
+
+
+### fn spec.opensearch.withReconnect_on_error
+
+```ts
+withReconnect_on_error(reconnect_on_error)
+```
+
+
+
+### fn spec.opensearch.withReload_after
+
+```ts
+withReload_after(reload_after)
+```
+
+
+
+### fn spec.opensearch.withReload_connections
+
+```ts
+withReload_connections(reload_connections)
+```
+
+
+
+### fn spec.opensearch.withReload_on_failure
+
+```ts
+withReload_on_failure(reload_on_failure)
+```
+
+
+
+### fn spec.opensearch.withRemove_keys_on_update
+
+```ts
+withRemove_keys_on_update(remove_keys_on_update)
+```
+
+
+
+### fn spec.opensearch.withRemove_keys_on_update_key
+
+```ts
+withRemove_keys_on_update_key(remove_keys_on_update_key)
+```
+
+
+
+### fn spec.opensearch.withRequest_timeout
+
+```ts
+withRequest_timeout(request_timeout)
+```
+
+
+
+### fn spec.opensearch.withResurrect_after
+
+```ts
+withResurrect_after(resurrect_after)
+```
+
+
+
+### fn spec.opensearch.withRetry_tag
+
+```ts
+withRetry_tag(retry_tag)
+```
+
+
+
+### fn spec.opensearch.withRouting_key
+
+```ts
+withRouting_key(routing_key)
+```
+
+
+
+### fn spec.opensearch.withScheme
+
+```ts
+withScheme(scheme)
+```
+
+
+
+### fn spec.opensearch.withSelector_class_name
+
+```ts
+withSelector_class_name(selector_class_name)
+```
+
+
+
+### fn spec.opensearch.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
+### fn spec.opensearch.withSniffer_class_name
+
+```ts
+withSniffer_class_name(sniffer_class_name)
+```
+
+
+
+### fn spec.opensearch.withSsl_verify
+
+```ts
+withSsl_verify(ssl_verify)
+```
+
+
+
+### fn spec.opensearch.withSuppress_doc_wrap
+
+```ts
+withSuppress_doc_wrap(suppress_doc_wrap)
+```
+
+
+
+### fn spec.opensearch.withSuppress_type_name
+
+```ts
+withSuppress_type_name(suppress_type_name)
+```
+
+
+
+### fn spec.opensearch.withTag_key
+
+```ts
+withTag_key(tag_key)
+```
+
+
+
+### fn spec.opensearch.withTarget_index_affinity
+
+```ts
+withTarget_index_affinity(target_index_affinity)
+```
+
+
+
+### fn spec.opensearch.withTarget_index_key
+
+```ts
+withTarget_index_key(target_index_key)
+```
+
+
+
+### fn spec.opensearch.withTemplate_name
+
+```ts
+withTemplate_name(template_name)
+```
+
+
+
+### fn spec.opensearch.withTemplate_overwrite
+
+```ts
+withTemplate_overwrite(template_overwrite)
+```
+
+
+
+### fn spec.opensearch.withTemplates
+
+```ts
+withTemplates(templates)
+```
+
+
+
+### fn spec.opensearch.withTime_key
+
+```ts
+withTime_key(time_key)
+```
+
+
+
+### fn spec.opensearch.withTime_key_exclude_timestamp
+
+```ts
+withTime_key_exclude_timestamp(time_key_exclude_timestamp)
+```
+
+
+
+### fn spec.opensearch.withTime_key_format
+
+```ts
+withTime_key_format(time_key_format)
+```
+
+
+
+### fn spec.opensearch.withTime_parse_error_tag
+
+```ts
+withTime_parse_error_tag(time_parse_error_tag)
+```
+
+
+
+### fn spec.opensearch.withTime_precision
+
+```ts
+withTime_precision(time_precision)
+```
+
+
+
+### fn spec.opensearch.withTruncate_caches_interval
+
+```ts
+withTruncate_caches_interval(truncate_caches_interval)
+```
+
+
+
+### fn spec.opensearch.withUnrecoverable_error_types
+
+```ts
+withUnrecoverable_error_types(unrecoverable_error_types)
+```
+
+
+
+### fn spec.opensearch.withUnrecoverable_record_types
+
+```ts
+withUnrecoverable_record_types(unrecoverable_record_types)
+```
+
+
+
+### fn spec.opensearch.withUse_legacy_template
+
+```ts
+withUse_legacy_template(use_legacy_template)
+```
+
+
+
+### fn spec.opensearch.withUser
+
+```ts
+withUser(user)
+```
+
+
+
+### fn spec.opensearch.withUtc_index
+
+```ts
+withUtc_index(utc_index)
+```
+
+
+
+### fn spec.opensearch.withValidate_client_version
+
+```ts
+withValidate_client_version(validate_client_version)
+```
+
+
+
+### fn spec.opensearch.withVerify_os_version_at_startup
+
+```ts
+withVerify_os_version_at_startup(verify_os_version_at_startup)
+```
+
+
+
+### fn spec.opensearch.withWith_transporter_log
+
+```ts
+withWith_transporter_log(with_transporter_log)
+```
+
+
+
+### fn spec.opensearch.withWrite_operation
+
+```ts
+withWrite_operation(write_operation)
+```
+
+
+
+## obj spec.opensearch.buffer
+
+
+
+### fn spec.opensearch.buffer.withChunk_full_threshold
+
+```ts
+withChunk_full_threshold(chunk_full_threshold)
+```
+
+
+
+### fn spec.opensearch.buffer.withChunk_limit_records
+
+```ts
+withChunk_limit_records(chunk_limit_records)
+```
+
+
+
+### fn spec.opensearch.buffer.withChunk_limit_size
+
+```ts
+withChunk_limit_size(chunk_limit_size)
+```
+
+
+
+### fn spec.opensearch.buffer.withCompress
+
+```ts
+withCompress(compress)
+```
+
+
+
+### fn spec.opensearch.buffer.withDelayed_commit_timeout
+
+```ts
+withDelayed_commit_timeout(delayed_commit_timeout)
+```
+
+
+
+### fn spec.opensearch.buffer.withDisable_chunk_backup
+
+```ts
+withDisable_chunk_backup(disable_chunk_backup)
+```
+
+
+
+### fn spec.opensearch.buffer.withDisabled
+
+```ts
+withDisabled(disabled)
+```
+
+
+
+### fn spec.opensearch.buffer.withFlush_at_shutdown
+
+```ts
+withFlush_at_shutdown(flush_at_shutdown)
+```
+
+
+
+### fn spec.opensearch.buffer.withFlush_interval
+
+```ts
+withFlush_interval(flush_interval)
+```
+
+
+
+### fn spec.opensearch.buffer.withFlush_mode
+
+```ts
+withFlush_mode(flush_mode)
+```
+
+
+
+### fn spec.opensearch.buffer.withFlush_thread_burst_interval
+
+```ts
+withFlush_thread_burst_interval(flush_thread_burst_interval)
+```
+
+
+
+### fn spec.opensearch.buffer.withFlush_thread_count
+
+```ts
+withFlush_thread_count(flush_thread_count)
+```
+
+
+
+### fn spec.opensearch.buffer.withFlush_thread_interval
+
+```ts
+withFlush_thread_interval(flush_thread_interval)
+```
+
+
+
+### fn spec.opensearch.buffer.withOverflow_action
+
+```ts
+withOverflow_action(overflow_action)
+```
+
+
+
+### fn spec.opensearch.buffer.withPath
+
+```ts
+withPath(path)
+```
+
+
+
+### fn spec.opensearch.buffer.withQueue_limit_length
+
+```ts
+withQueue_limit_length(queue_limit_length)
+```
+
+
+
+### fn spec.opensearch.buffer.withQueued_chunks_limit_size
+
+```ts
+withQueued_chunks_limit_size(queued_chunks_limit_size)
+```
+
+
+
+### fn spec.opensearch.buffer.withRetry_exponential_backoff_base
+
+```ts
+withRetry_exponential_backoff_base(retry_exponential_backoff_base)
+```
+
+
+
+### fn spec.opensearch.buffer.withRetry_forever
+
+```ts
+withRetry_forever(retry_forever)
+```
+
+
+
+### fn spec.opensearch.buffer.withRetry_max_interval
+
+```ts
+withRetry_max_interval(retry_max_interval)
+```
+
+
+
+### fn spec.opensearch.buffer.withRetry_max_times
+
+```ts
+withRetry_max_times(retry_max_times)
+```
+
+
+
+### fn spec.opensearch.buffer.withRetry_randomize
+
+```ts
+withRetry_randomize(retry_randomize)
+```
+
+
+
+### fn spec.opensearch.buffer.withRetry_secondary_threshold
+
+```ts
+withRetry_secondary_threshold(retry_secondary_threshold)
+```
+
+
+
+### fn spec.opensearch.buffer.withRetry_timeout
+
+```ts
+withRetry_timeout(retry_timeout)
+```
+
+
+
+### fn spec.opensearch.buffer.withRetry_type
+
+```ts
+withRetry_type(retry_type)
+```
+
+
+
+### fn spec.opensearch.buffer.withRetry_wait
+
+```ts
+withRetry_wait(retry_wait)
+```
+
+
+
+### fn spec.opensearch.buffer.withTags
+
+```ts
+withTags(tags)
+```
+
+
+
+### fn spec.opensearch.buffer.withTimekey
+
+```ts
+withTimekey(timekey)
+```
+
+
+
+### fn spec.opensearch.buffer.withTimekey_use_utc
+
+```ts
+withTimekey_use_utc(timekey_use_utc)
+```
+
+
+
+### fn spec.opensearch.buffer.withTimekey_wait
+
+```ts
+withTimekey_wait(timekey_wait)
+```
+
+
+
+### fn spec.opensearch.buffer.withTimekey_zone
+
+```ts
+withTimekey_zone(timekey_zone)
+```
+
+
+
+### fn spec.opensearch.buffer.withTotal_limit_size
+
+```ts
+withTotal_limit_size(total_limit_size)
+```
+
+
+
+### fn spec.opensearch.buffer.withType
+
+```ts
+withType(type)
+```
+
+
+
+## obj spec.opensearch.ca_file
+
+
+
+### fn spec.opensearch.ca_file.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.opensearch.ca_file.mountFrom
+
+
+
+## obj spec.opensearch.ca_file.mountFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.ca_file.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.ca_file.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.ca_file.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.ca_file.valueFrom
+
+
+
+## obj spec.opensearch.ca_file.valueFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.ca_file.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.ca_file.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.ca_file.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.client_cert
+
+
+
+### fn spec.opensearch.client_cert.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.opensearch.client_cert.mountFrom
+
+
+
+## obj spec.opensearch.client_cert.mountFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.client_cert.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.client_cert.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.client_cert.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.client_cert.valueFrom
+
+
+
+## obj spec.opensearch.client_cert.valueFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.client_cert.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.client_cert.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.client_cert.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.client_key
+
+
+
+### fn spec.opensearch.client_key.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.opensearch.client_key.mountFrom
+
+
+
+## obj spec.opensearch.client_key.mountFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.client_key.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.client_key.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.client_key.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.client_key.valueFrom
+
+
+
+## obj spec.opensearch.client_key.valueFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.client_key.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.client_key.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.client_key.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.client_key_pass
+
+
+
+### fn spec.opensearch.client_key_pass.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.opensearch.client_key_pass.mountFrom
+
+
+
+## obj spec.opensearch.client_key_pass.mountFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.client_key_pass.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.client_key_pass.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.client_key_pass.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.client_key_pass.valueFrom
+
+
+
+## obj spec.opensearch.client_key_pass.valueFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.client_key_pass.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.client_key_pass.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.client_key_pass.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.password
+
+
+
+### fn spec.opensearch.password.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.opensearch.password.mountFrom
+
+
+
+## obj spec.opensearch.password.mountFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.password.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.password.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.password.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.password.valueFrom
+
+
+
+## obj spec.opensearch.password.valueFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.password.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.password.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.password.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.template_file
+
+
+
+### fn spec.opensearch.template_file.withValue
+
+```ts
+withValue(value)
+```
+
+
+
+## obj spec.opensearch.template_file.mountFrom
+
+
+
+## obj spec.opensearch.template_file.mountFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.template_file.mountFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.template_file.mountFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.template_file.mountFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
+## obj spec.opensearch.template_file.valueFrom
+
+
+
+## obj spec.opensearch.template_file.valueFrom.secretKeyRef
+
+
+
+### fn spec.opensearch.template_file.valueFrom.secretKeyRef.withKey
+
+```ts
+withKey(key)
+```
+
+
+
+### fn spec.opensearch.template_file.valueFrom.secretKeyRef.withName
+
+```ts
+withName(name)
+```
+
+
+
+### fn spec.opensearch.template_file.valueFrom.secretKeyRef.withOptional
+
+```ts
+withOptional(optional)
+```
+
+
+
 ## obj spec.oss
 
 
@@ -12778,6 +15861,14 @@ withPath(path)
 
 ```ts
 withRead_timeout(read_timeout)
+```
+
+
+
+### fn spec.oss.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
 ```
 
 
@@ -13294,6 +16385,14 @@ withInsert_key_prefix(insert_key_prefix)
 
 ```ts
 withPort(port)
+```
+
+
+
+### fn spec.redis.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
 ```
 
 
@@ -13894,6 +16993,14 @@ withS3_region(s3_region)
 
 ```ts
 withSignature_version(signature_version)
+```
+
+
+
+### fn spec.s3.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
 ```
 
 
@@ -14752,6 +17859,14 @@ withRead_timeout(read_timeout)
 
 
 
+### fn spec.splunkHec.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
 ### fn spec.splunkHec.withSource
 
 ```ts
@@ -15520,6 +18635,14 @@ withRegion(region)
 
 
 
+### fn spec.sqs.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
 ### fn spec.sqs.withSqs_url
 
 ```ts
@@ -16074,6 +19197,14 @@ withProxy_uri(proxy_uri)
 
 
 
+### fn spec.sumologic.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
+```
+
+
+
 ### fn spec.sumologic.withSource_category
 
 ```ts
@@ -16522,6 +19653,14 @@ withInsecure(insecure)
 
 ```ts
 withPort(port)
+```
+
+
+
+### fn spec.syslog.withSlow_flush_log_threshold
+
+```ts
+withSlow_flush_log_threshold(slow_flush_log_threshold)
 ```
 
 
