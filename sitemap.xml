@@ -2,67 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1alpha1/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1alpha1/clusterFlow/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1alpha1/clusterOutput/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1alpha1/flow/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1alpha1/output/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1beta1/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1beta1/clusterFlow/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1beta1/clusterOutput/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1beta1/flow/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://jsonnet-libs.github.io/banzai-logging-libsonnet/3.17.10/logging/v1beta1/output/</loc>
-         <lastmod>2023-01-27</lastmod>
+         <lastmod>2023-06-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
